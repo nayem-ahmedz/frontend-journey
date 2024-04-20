@@ -19,7 +19,7 @@ console.log('Defined with BigInt() ' + num4 + ' type is : ' + typeof num4);
 //you cannot work on floating point while using bigInt, also cannt mixup with other type such as number   ###console.log(5 + num4);
 console.log(9n / 5n ); //why it is not 1.8? because bigInt
 let num5 = BigInt(age);
-console.log(num5);
+console.log(num5, typeof num5);
 /*
 Data type == 8 types
     number

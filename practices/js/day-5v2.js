@@ -33,6 +33,7 @@ let maths = function (x,y){
 }
 console.log(maths(2,3));
 console.log(maths(3,4));
+console.log(maths, typeof maths);
 
 function fun(){
     let f1 = 'Nayem';

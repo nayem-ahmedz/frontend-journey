@@ -54,9 +54,34 @@ function display(name, age){
     console.log(`hello ${name}, Age : ${age}.`);
 }
 display('Nayem', 23);
-function display2(name, age, birthYear = 1999){
+function display2(name, age, birthYear = 1999){ //function's parameter
     console.log(`hello ${name}, Age : ${age} years, birthYear: ${birthYear} `);
 }
 display2('Nayem', 23, 2000);
 display2('Hajifa', 22);
-display2('no-name');
+display2('no-name'); //argument
+//see event driven invokation on doc
+
+(function(){
+    console.log('I am automatically invoked');
+})();
+(function(message){
+    console.log('This is a : ' + message);
+})('Message');
+
+let maths = function(x, y){
+    return x + y;
+}
+console.log(maths(1,3));
+console.log(maths, typeof maths);
+
+function fun3(){
+    var a = 5;
+    let b = 3;
+    console.log(a, b);
+}
+fun3();
+//console.log(a, b); function's variable has block scope
+
+
+

@@ -10,12 +10,13 @@
 </head>
 <body>
     <button id="clickMe">Click Me!</button>
-    <script src="day-6.js"></script>
     <script>
+        let fname = 'Nayem';
         function clicked(){
-            alert('You clicked me!');
+            alert('You clicked me! ' + fname);
         }
-        document.getElementById('clickme').addEventListener('clicked', clicked);
+        document.getElementById('clickMe').addEventListener('click', clicked);
     </script>
+    <script src="day-6.js"></script>
 </body>
 </html>
