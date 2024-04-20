@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 | CSS - Frontend Journey | Web Development</title>
+    <!--Today 22 March 2024 | 1:44:55 seconds-->
+    <style>
+        .one{
+            width: 500px; margin: 20px auto auto;
+            color: red; text-transform: capitalize; text-indent: 50px;
+            letter-spacing: 10px; word-spacing: 20px; line-height: 1.125;
+            font-family: verdana, sans-serif;
+        }
+        a{
+            color: red; font-size: 24px; text-decoration: none; border: 1px solid gray; padding: 10px 20px; background-color: #eee; display: inline-block; margin-top: 20px;
+        }
+        a:visited{
+            color: tomato;
+        }
+        a:hover{
+            background-color: red; color: white;
+        }
+        a:active{
+            color: black;
+        }
+        ol{
+            list-style-type: decimal-leading-zero; list-style-position: outside;
+        }
+        table{
+            width: 50%;
+        }
+        table, td, th{
+            border: 1px solid; border-collapse: collapse;
+        }
+        td, th{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa iusto cumque adipisci tenetur, sint libero? Laudantium, fu</p>
+    <a href="/css/day-2.html" target="_blank">Day 2 Web - CSS</a> <a href="/css/day-1.html">Day 1 Web - CSS</a>
+    <h3>Bazar List</h3>
+    <ol>
+        <li>Rice</li>
+        <li>Onion</li>
+        <li>Oil</li>
+    </ol>
+    <table>
+        <tr>
+            <th>Name</td> <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</td> <td>01712345</td>
+        </tr>
+        <tr>
+            <td>01620358</td>
+        </tr>
+    </table> <br/><br/>
+    <table>
+        <tr>
+            <th>Name</th> <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Nayem</td> <td>01712345</td> <td>016203592</td>
+        </tr>
+    </table>
+</body>
+</html>

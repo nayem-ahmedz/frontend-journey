@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Homepage</title>
+    <!--Today 7 April 2024-->
+    <script src="https://kit.fontawesome.com/e54598ab59.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0; font-family: Arial, Helvetica, sans-serif; min-height: 100vh;
+            display: flex; flex-direction: column;
+        }
+        header{
+            padding: 10px 6px 0;
+        }
+        .navbar{
+            display: flex; justify-content: flex-end; align-items: flex-start;
+            list-style-type: none; margin: 0;
+        }
+        .navbar li{
+            display: inline-block; margin: 10px;
+        }
+        .navbar li a:link, .navbar li a:visited{
+            text-decoration: none; color: black; font-size: 13px;
+        }
+        .navbar li a:hover{
+            text-decoration: 1px solid underline;
+        }
+        .navbar img{
+            height: 45px; width: 45px; transform: translateY(-10px);
+        }
+        .navbar li button{
+            background-color: rgba(0,0,255, 0.7); border: none; color: white; font-size: 13px; padding: 8px 25px; transform: translateY(-5px); border-radius: 5px; cursor: pointer;
+        }
+        header, footer{
+            flex-shrink: 0;
+        }
+        section{
+            width: 600px; margin: auto; text-align: center;
+            flex-grow: 1;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .center-logo{
+            width: 300px; height: auto;
+        }
+        .search-box{
+            width: 500px; padding: 5px 20px; border: 1px solid #abc; border-radius: 50px; margin: auto;
+            position: relative; display: flex; justify-content: space-between;
+        }
+        .search-box #search{
+            flex-basis: 440px; padding: 5px; border: none; outline: none; background: none; font-size: 16px;
+        }
+        .search-box i{
+            margin-top: 5px; color: gray;
+        }
+        .t1{
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+        .t3{
+            margin-top: 22px;
+        }
+        .btn{
+            padding: 5px; border: none; background: none; cursor: pointer;
+        }
+        footer > div{
+            padding: 10px 0; border: 1px solid rgba(0, 0, 0, 0.1); background-color: rgba(255,255,255, 0.3);
+        }
+        .f2{
+            display: flex; justify-content: space-between;
+        }
+        .f2 > div button{
+            background: none; border: none; font-size: 14px; padding: 0 10px;
+        }
+        button:hover{
+            text-decoration: 1px solid underline; cursor: pointer;
+        }
+        #info{
+            position: fixed; top: 20px; left: 20px; color: rgba(0, 0, 0, 0.1); font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li> <a href="#">Gmail</a> </li>
+            <li> <a href="#">Images</a> </li>
+            <li> <img src="/media/google-nine-dots.png" alt="image"> </li>
+            <li> <button type="button" onclick="">Sign in</button> </li>
+        </ul>
+    </header>
+    <section>
+        <div class="center">
+            <img class="center-logo" src="/media/google-logo.png" alt="google-logo">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search" name="search" placeholder="Search Google or type a URL">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+            <button class="t1 btn">Google Search</button>
+            <button class="t2 btn">I'm feeling lucky</button> <br>
+            <button class="t3 btn">Google Offered in বাংলা</button>
+        </div>
+    </section>
+    <footer>
+        <div style="padding: 10px; font-size: 14px;">Bangladesh</div>
+        <div class="f2">
+            <div style="border-bottom: none;">
+                <button>About</button>
+                <button>Advertisment</button>
+                <button>Business</button>
+                <button>How Search Works</button>
+            </div>
+            <div>
+                <button>Privacy</button>
+                <button>Terms</button>
+                <button>Settings</button>
+            </div>
+        </div>
+    </footer>
+    <div id="info">This is a Practice Project</div>
+</body>
+</html>

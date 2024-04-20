@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice JS</title>
+</head>
+<body style="font-size: 32px;">
+    <p id="one"></p>
+    
+    <script>
+        var a = 5; //variable
+        let b = 6; //block variable
+        var a = 10;
+        {
+            var a = 9;
+            let b = 10;
+            console.log("A = " + a);
+            console.log(b);
+        }
+        console.log(b);
+        console.log("A = " + a);
+
+        var z = 5;
+        {
+            let z = 6;
+            console.log(z);
+        }
+        const flowers = ["Rose", "Water Lily", "Purple Heart"];
+        flowers[2] = "Sunflower";
+        flowers.push("Rain Lily");
+        flowers.pop("Rose");
+        console.log(flowers);
+    </script>
+</body>
+</html>

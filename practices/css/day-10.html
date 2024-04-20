@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 | CSS Nav Bar - Frontend Journey | Web Development</title>
+    <!--Today 5 April 2024-->
+    <!--
+        From 3:55:00
+        To 4:34:00
+        
+    -->
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        header{
+            width: 100%; background-color: black; color: white; padding: 5px 10px;
+            display: flex; justify-content: space-between;
+        }
+        .logo{
+            color: blue; font-size: 32px; margin: 30px;
+        }
+        .navbar{
+            display: flex; flex-wrap: wrap; list-style-type: none; margin-top: 30px;
+        }
+        .navbar li a:link, .navbar li a:visited, #d-btn{
+            text-decoration: none; color: white; padding: 10px 20px; display: block; transition-property: all; transition-duration: 1s; transition-timing-function: ease;
+        }
+        .navbar > li a:hover, #d-btn:hover{
+            background-color: white; color: black;
+        }
+        #d-btn{
+            position: relative; height: 38px;
+        }
+        .d-cont{
+            display: none; position: absolute; left: 0; top: 38px; background-color: #eee; list-style-type: none; width: 180px;
+        }
+        .d-cont li{
+            display: block; padding: 10px 20px;
+        }
+        .d-cont li:hover{
+            background-color: black; color: white;
+        }
+        #d-btn:hover .d-cont{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Grid seems complex, could not understant</h2> -->
+    <header>
+        <div class="logo">Nayem</div>
+        <ul class="navbar">
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">About</a> </li>
+            <li id="d-btn">
+                Service
+                <ul class="d-cont">
+                    <li>App Development</li>
+                    <li>Web Development</li>
+                    <li>Software</li>
+                    <li>And more..</li>
+                </ul>
+            </li>
+            <li> <a href="#">Contact</a> </li>
+        </ul>
+    </header>
+    
+</body>
+</html>

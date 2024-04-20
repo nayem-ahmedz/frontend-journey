@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 | CSS Flexbox</title>
+    <style>
+        body{
+            height: 100vh; border: 1px solid; display: flex; flex-direction: column;
+        }
+        nav, footer{
+            flex-shrink: 0;
+        }
+        section{
+            flex-grow: 1; border: 2px solid blue; display: flex; justify-content: center;
+            align-items: center; flex-direction: column;
+        }
+        nav ul{
+            display: flex; flex-direction: row; justify-content: flex-end;
+        }
+        nav ul li{
+            list-style-type: none; padding: 10px 20px;
+        }
+        nav ul li:hover{
+            background-color: black; color: white;
+        }
+        #logo{
+            height: 200px; width: 80%; background-color: red; flex-basis: 200px;
+        }
+        footer .layer{
+            background-color: gray; padding: 10px; margin-bottom: 5px;
+        }
+        footer .layer:last-child{
+            background-color: black; color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section>
+            <div id="logo"></div>
+            <h1>CSS Flexbox</h1>
+            <p>I have learnt css flexbox today, and it is just amazing, loved it</p>
+    </section>
+    <footer>
+        <div class="layer">Layer 1</div>
+        <div class="layer">Layer 2</div>
+        <div class="layer">Layer 2</div>
+    </footer>
+
+    <!--
+        <style>
+        body{
+            margin: 0;
+        }
+        .parent{
+            width: 100vw; height: 100vh; background-color: red; display: flex; flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .child{
+            width: 200px; height: 200px; border: 2px solid; background-color: green; margin: 5px;
+        }
+    </style>
+    <div class="parent">
+        <div class="child"></div> 
+    </div>
+    -->
+</body>
+</html>

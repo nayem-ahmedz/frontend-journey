@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 | CSS Media Queries - Frontend Journey | Web Development</title>
+    <!--Today 8 April 2024-->
+    <!--
+        From 5:21:00
+        To end
+    -->
+    <link rel="stylesheet" href="/practices/css/blog.css">
+    <style>
+        .box{
+            display: flex; justify-content: center; align-items: center; min-height: 100vh;
+        }
+        .box h1{
+            flex-basis: 800px; padding: 20px 40px; text-align: center; background: linear-gradient(45deg, red, green); color: white; border-radius: 15px;
+            flex-shrink: 0; transition: flex-basis ease-in 1s; position: relative;
+            
+        }
+        .circle{
+            height: 60px; width: 60px; background-color: red; border-radius: 50%;
+            position: absolute; left: 0; top: 8px;
+            animation-name: rounding; animation-duration: 3s; animation-timing-function: ease-in; animation-direction: alternate; animation-iteration-count: infinite;
+        }
+        @keyframes rounding{
+            From{
+                left: 0; background-color: green;
+            }
+            To{
+                transform: translateX(740px); background-color: red;
+            }
+        }
+        @media (min-width: 1500px){
+            .box h1{
+                flex-basis: 1000px; 
+            }
+            .circle{
+                animation-name: rounding-large;
+            }
+        }
+        @media (max-width: 1023px){
+            .box h1{
+                flex-basis: 600px;
+            }
+            .circle{
+                animation-name: rounding-medium;
+            }
+        }
+        @media screen and (max-width: 767px){
+            .box h1{
+                flex-basis: 360px;
+            }
+            .circle{
+                height: 100px; width: 100px; animation-name: rounding-small;
+            }
+        }
+        @keyframes rounding-large{
+            From{
+                left: 0; background-color: green;
+            }
+            To{
+                transform: translateX(940px); background-color: red;
+            }
+        }
+        @keyframes rounding-medium{
+            From{
+                left: 0; background-color: green;
+            }
+            To{
+                transform: translateX(540px); background-color: red;
+            }
+        }
+        @keyframes rounding-small{
+            From{
+                left: 0; background-color: green;
+            }
+            To{
+                transform: translateX(260px); background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>
+            Make a responsive website
+            <div class="circle"></div>
+        </h1>
+        
+    </div>
+</body>
+</html>

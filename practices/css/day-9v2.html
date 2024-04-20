@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice | Day 9 | CSS - Frontend Journey | Web Development</title>
+    <!--Today 31 March 2024-->
+    <!--
+        From 3:40:00
+        To 3:55:00
+        Learnt flexbox ( tutorial :: not good enough)
+    -->
+    <style>
+        .flexbox{
+            width: 100%; min-height: 300px; border: 1px solid red;
+            display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-end; align-items: flex-start; 
+        }
+        .flexbox > div{
+            height: 65px; flex-basis: 170px; background-color: blue; margin: 10px; flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 | JS</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="cars"></p>
+    <p id="car"></p>
+    <script>
+        let carName, //not assign == undefined
+            name = "Nayem",
+            age = 23;
+        document.getElementById('demo').innerHTML = carName + name + age;
+        let $ = 5;
+        console.log($);
+        console.log(carName);
+        const cars = ["Toyota", "BMW", "Audi"];
+        console.log(cars);
+        document.getElementById('cars').innerHTML = cars;
+        const car = {
+            type: "four wheeler",
+            model: 2005,
+            color: "red"
+        };
+        var CAR = document.getElementById('car');
+        //CAR.innerHTML = car; //says [Object Object]
+        CAR.innerHTML = car.color;
+        car.color = "blue";
+        document.write(car.color);
+        car.owner = "Nayem Ahmed";
+        document.write("</p>" + car.owner + "</p>");
+        car.owner = "Hajifa Jui";
+        document.write(car.owner);
+        var a = 5;
+        var b =6;
+        //const a = 6; Error
+        //let a = 7; Error
+        {
+            var b = 11; //var can be reassigned
+            let a = 6; //no-error
+            //const a = 7; //Error
+        }
+        {
+            const a = 10; //no-error
+            //let a = 11; //error
+        }
+    </script>
+</body>
+</html>

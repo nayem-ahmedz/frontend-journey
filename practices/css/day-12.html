@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 | CSS Forms - Frontend Journey | Web Development</title>
+    <!--Today 7 April 2024-->
+    <script src="https://kit.fontawesome.com/e54598ab59.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/practices/css/blog.css">
+    <style>
+        .form1{
+            width: fit-content; margin: 80px auto auto; padding: 40px; border-radius: 20px; background-color: #eee; text-align: center; box-shadow: 0 0 7px black;
+        }
+        .form1 input:not(.btn){
+            display: block; padding: 10px; margin: 15px auto; width: 250px;
+        }
+        .form1 input{
+            border-radius: 5px; border: 1px solid gray; font-size: 15px;
+        }
+        .form1 input:focus{
+            outline-color: rgba(0, 0, 255, 0.5);
+        }
+        .btn{
+            margin: 15px 10px auto; padding: 8px; transition: all ease 1s;
+        }
+        .reset:hover{
+            background-color: red; color: white;
+        }
+        .submit:hover{
+            background-color: green; color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Tech Universe</div>
+        <ul class="navbar">
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#about">About</a> </li>
+            <li> <a href="#contact">Contact</a> </li>
+            <li id="drop-btn">
+                Archeive
+                <ul class="d-cont">
+                    <li> <a href="#y-2023">Year, 2023</a> </li>
+                    <li> <a href="#y-2022">Year, 2022</a> </li>
+                    <li> <a href="#y-2021">Year, 2021</a> </li>
+                    <li> <a href="#more">More..</a> </li>
+                </ul>
+            </li>
+            <li> <a href="#latest">Latest Updates</a> </li>
+        </ul>
+    </header>
+    <section>
+        <div class="form1">
+            <form action="#" method="get" autocomplete="off">
+                <input type="text" name="username" id="username" placeholder="username">
+                <input type="password" name="password" id="password" placeholder="password">
+                <input type="reset" value="Reset" class="btn reset"> <input type="submit" value="Log in" class="btn submit">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <h3 class="footer-logo">Tech Universe</h3>
+        <p class="footer-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit ipsum facere, officia dolorum dolores labore ullam. Fugiat nam, dignissimos maiores quod, laboriosam culpa labore unde itaque est minus soluta similique perferendis commodi id ipsa voluptate libero. Sint, ab?
+        </p>
+        <div class="icon">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <h4 class="copyright">All Right Reserved @2024 Tech Universe</h4>
+    </footer>
+</body>
+</html>

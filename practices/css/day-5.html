@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 | CSS - Frontend Journey | Web Development</title>
+    <!--Today 26 March 2024-->
+    <!--
+        From 2:14 Minutes
+        To 3:00 Minutes
+    -->
+    <style>
+        .img-1{
+            float: left;
+        }
+        .text-1{
+            clear: both;
+        }
+        .text-1::first-letter{
+            color: blue; font-size: 32px; margin-right: 5px; text-decoration: 2px dotted underline;
+        }
+        .text-1::first-line{
+            color: red;
+        }
+        .text-2{
+            font-size: 35px; text-align: center;
+        }
+        .text-2::before{
+            content: "Our beloved, ";
+        }
+        .text-2::after{
+            content: url(/media/bd-flag2.png);
+        }
+        p:nth-child(4){
+            color: green;
+        }
+        .box-1{
+            width: 400px; height: 400px;
+            background: linear-gradient( green, red);
+            /* background: linear-gradient(to top left, green 10%, red); */
+        }
+        .box-2{
+            width: 400px; height: 400px; margin-top: 30px;
+            /* background: radial-gradient(rgba(0, 0, 0, 1.0) 20%, rgba(255, 255, 255, 1.0)); */
+            background: radial-gradient(red 50px, green);
+        }
+        .card{
+            width: 400px; height: auto; margin: 30px auto; text-align: center; border: 1px solid gray; padding: 20px; border-radius: 5px;
+            box-shadow: 0 0 10px 3px gray; /* 4th one is Sprite */
+        }
+        .card > h3{
+            text-shadow: 5px 5px 10px blue, -5px -5px 10px red; font-size: 32px; margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="font-family: verdana; text-align: center;">Learnt float, pseudo-class, element, linear-gradient, radial-gradient, text and box-shadow, and image sprite (understood better than w3school) </h2>
+    <img src="/media/bd-flag.png" alt="bd-flag" class="img-1">
+    <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nostrum, officia aliquam ut maxime est quisquam ipsa recusandae, possimus iusto rerum fugiat eaque perferendis esse, sint magnam deserunt consequatur accusamus velit consectetur dolores dicta cum vero. Eveniet, repudiandae deleniti! Sit dignissimos tenetur quod, blanditiis, quae fugit natus, quidem laborum expedita asperiores molestias. Incidunt rem sunt natus hic quos debitis earum, totam molestiae quam repudiandae animi tempora. Possimus labore quisquam molestias aliquid. Quia vero libero, obcaecati consequatur rerum omnis aliquid accusamus!</p>
+    <p class="text-2"> Bangladesh's Flag </p>
+    <p>Google Flat UI Color</p>
+    <div class="box-1">
+        Linear Gradient Color
+    </div>
+    <div class="box-2">
+        Radial Gradient Color , circle-gradient
+    </div>
+    <div class="card">
+        <img src="/media/bd-flag.png">
+        <h3>Flag of Bangladesh</h3>
+    </div>
+</body>
+</html>

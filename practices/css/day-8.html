@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - Day 8 | CSS - Frontend Journey | Web Development</title>
+    <!--Today 30 March 2024-->
+    <!--
+        From 3:00:00
+        To 3:40:00
+        
+    -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box-1{
+            width: 50%; height: 100px; background-color: gray; margin: auto;
+            /* transition-property: width; transition-duration: 1s; transition-timing-function: linear; transition-delay: 1s; */
+            transition: width 1s linear;
+        }
+        #first-text{
+            font-size: 32px; text-align: center; padding-top: 20px; color: white; transition: 1s;
+        }
+        .box-1:hover{
+            width: 100%;
+        }
+        .box-1:hover #first-text{
+            color: black;
+        }
+        .box-2{
+            display: flex; justify-content: center; align-items: center; height: 230px; border: 1px solid red; margin: 20px auto;
+        }
+        .box{
+            background-color: green; height: 100px; width: 100px; margin: 20px 80px;
+            transition: 1s;
+        }
+        .box:nth-child(1){
+            transform: rotate(45deg);
+        }
+        .box:nth-child(3){
+            transform: skew(40deg);
+        }
+        .box:nth-child(2){
+            transform: scale(1.2);
+        }
+        .c-panel{
+            display: flex; justify-content: center; align-items: center; flex-wrap: wrap; border-bottom: 1px solid red;
+        }
+        .boxs{
+            margin: 0 10px 10px; padding: 5px 10px 30px; border: 1px solid transparent; border-right: 1px solid gray; border-radius: 5px;
+        }
+        .boxs:last-child{
+            border-right: none;
+        }
+        .boxs:hover{
+            border: 1px solid gray;
+        }
+        .baseline{
+            width: 100%; background-color: #eee; text-align: center; padding: 5px; margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        <p id="first-text">Hover on me!</p>
+    </div>
+    <div class="box-2">
+        <div class="box" id="b1">ROTATE</div>
+        <div class="box" id="b2">SCALE</div>
+        <div class="box" id="b3">SKEW</div>
+        <div class="box" id="b4">TRANSLATE</div>
+    </div>
+    <div class="c-panel">
+        <div class="rotate boxs">
+            <p>CSS Transform : ROTATE</p>
+            <input type="number" id="rotate-value" name="rotate-value" placeholder="Roate Value ?">
+            <button type="button" onclick="rotateFun()">Rotate</button>
+        </div>
+        <div class="scale boxs">
+            <p>CSS Transform : SCALE</p>
+            <button type="button" onclick="scaleFun(1)">1.5</button>
+            <button type="button" onclick="scaleFun(0)">Default</button>
+            <button type="button" onclick="scaleFun(2)">2.0</button>
+        </div>
+        <div class="skew boxs">
+            <p>CSS Transform : SKEW</p>
+            <input type="number" id="skew-value" name="skew-value" placeholder="Skew Value ?">
+            <button type="button" onclick="skewFun()">Skew</button>
+        </div>
+        <div class="translate boxs">
+            <p>CSS Transform : TRANSLATE</p>
+            <input type="number" id="translate-value" name="translate-value" placeholder="Translate Value">
+            <button type="button" onclick="translateFun(0)">Translate X</button>
+            <button type="button" onclick="translateFun(1)">Translate (Both)</button>
+            <button type="button" onclick="translateFun(2)">Translate Y</button>
+        </div>
+    </div>
+    <div class="baseline" onclick="magicFun()">Reset</div>
+    <script src="/practices/css/day-8.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number : Even or Odd ? | Day 4 | JS Operator</title>
+    <style>
+        body{
+            margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center;
+        }
+        .box{
+            padding: 15px 30px 10px; margin: 10px; border: 1px solid red; border-radius: 10px; text-align: center;
+        }
+        input[type="number"]{
+            width: 50%; padding: 10px; text-align: center;
+        }
+        button{
+            padding: 10px 20px; margin-top: 30px; font-size: 16px; color: red;
+        }
+        button:active{
+            transform: scale(0.8);
+        }
+        .checkB{
+            min-height: 110px;
+        }
+        #result{
+            margin-bottom: 0; transform: scale(1.2);
+        }
+        @media screen and (max-width: 424px){
+            .box h1{
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Find weather a number is even or odd</h1>
+        <div class="inputB">
+            <input type="number" id="number" name="number" placeholder="Enter a number">
+        </div>
+        <div class="checkB">
+            <button type="button" onclick="checkF()">Check</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        function checkF(){
+            let num = document.getElementById('number').value;
+            let res = document.getElementById('result');
+            if(num!==""){
+                if(num % 2 === 0){
+                res.innerHTML = `The number ${num} is Even`;
+                res.style.color = 'blue';
+                } else{
+                res.innerHTML = `The number ${num} is Odd`;
+                res.style.color = 'green';
+                }
+            } else{
+                res.innerHTML = 'Please enter a value to check';
+                res.style.color = 'red';
+            }
+        }
+    </script>
+    <!--
+        <script src="/practices/js/day-4.js"></script>
+    -->
+</body>
+</html>

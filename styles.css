@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+.basic-list{
+    list-style-type: circle;
+}
+.basic-list li a:link, .basic-list li a:visited{
+    display: inline-block; padding: 8px; text-decoration: none;
+}
+.basic-list li a:hover{
+    background-color: black; color: white;
+}

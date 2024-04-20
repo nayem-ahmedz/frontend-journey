@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - Day 6 | CSS - Frontend Journey | Web Development</title>
+    <!--Today 27 March 2024-->
+    <!--
+        Revise/Practice
+    -->
+    <style>
+        .heading-text{
+            font-family: verdana; font-size: 30px;
+        }
+        .img-1{
+            float: right;
+        }
+        .text-1{
+            clear: both; line-height: 1.5;
+        }
+        .text-1:first-letter{
+            color: blue; font-size: 32px; text-decoration: 1px solid underline;
+        }
+        .text-1:first-line{
+            color: red;
+        }
+        .text-2{
+            text-align: center; font-size: 34px; color: blue;
+        }
+        .text-2::before{
+            content: "Our Beloved ";
+        }
+        .text-2::after{
+            content: " " url('/media/bd-flag2.png');
+        }
+        .box-1, .box-2{
+            height: 400px; width: 400px; margin: 20px 0;
+        }
+        .box-1{
+            background: linear-gradient(green, red);
+        }
+        .box-2{
+            background: radial-gradient(red, green);
+        }
+        .box-3{
+            max-width: 400px; margin: 10px auto 80px; text-align: center; padding: 20px;
+            border-radius: 10px; box-shadow: 0 0 10px 1px gray;
+        }
+        .flag-bd{
+            font-size: 24px; text-shadow: 5px 5px 5px red, -5px -5px 5px green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="heading-text">Learnt float, pseudo-class, element, linear-gradient, radial-gradient, text ad box shadow, and image-sprite (...)</h2>
+    <img class="img-1" src="/media/bd-flag.png" alt="bd-flag">
+    <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto recusandae incidunt, dolorum, velit doloremque, commodi at tenetur suscipit eum odio perferendis amet autem nobis voluptatem? Dolorum non corporis enim asperiores maiores architecto error ipsam voluptatibus nulla pariatur modi ad omnis, qui optio nemo minus in sequi dolor dolorem laborum deserunt possimus placeat. Tempora libero reprehenderit, facilis eum saepe aspernatur quis aperiam minima culpa repellat ullam hic nobis consectetur maxime nulla expedita doloribus mollitia rem laborum. Et minima aliquam impedit.</p>
+    <p class="text-2">Bangladesh's Flag</p>
+    <div class="box-1">linear-gradient</div>
+    <div class="box-2">radial-gradient</div>
+    <div class="box-3">
+        <img src="/media/bd-flag.png" alt="bd-flag">
+        <p class="flag-bd">Flag of Bangladesh </p>
+    </div>
+</body>
+</html>

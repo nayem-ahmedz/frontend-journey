@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 | CSS</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .parent{
+            width: 100vw; height: 50vh; background-color: red;
+            position: relative; z-index: 10;
+        }
+        .child{
+            width: 200px; height: 200px; background-color: green;
+            position: absolute; right: 0; z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <h1>why z-index is not working</h1>
+</body>
+</html>

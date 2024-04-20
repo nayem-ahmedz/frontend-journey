@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 | CSS Nav Bar - Frontend Journey | Web Development</title>
+    <!--Today 6 April 2024-->
+    <!--
+        From 4:34:00
+        To 4:51:00
+        Learn to create header and footer, with icons
+    -->
+    <script src="https://kit.fontawesome.com/e54598ab59.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        footer{
+            width: 100%; color: white; background-color: rgba(0, 0, 0, 0.744); text-align: center;
+            position: absolute; bottom: 0; font-family: calibri;
+        }
+        footer h2{
+            font-size: 48px; margin: 10px auto;
+        }
+        .icon i{
+            font-size: 32px; padding: 10px; color: #abb; transition: 0.5s;
+        }
+        .icon i:hover{
+            color: white; transform: scale(1.4);
+        }
+        .text{
+            width: 50%; font-size: 18px; margin: 5px auto 20px; font-weight: lighter;
+        }
+        .copy{
+            font-size: 24px; background-color: rgba(37, 36, 36, 0.79); color: white; padding: 10px; margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nayem's Canvas</h1>
+        <p>A virtual space of Nayem Ahmed</p>
+    </header>
+    <footer>
+        <h2>Nayem Ahmed</h2>
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque expedita ex quo! Voluptate iste doloremque odit rerum delectus tempora autem! Nostrum dignissimos voluptatibus facere quam cumque officiis perferendis veritatis ullam?
+        </p>
+        <div class="icon">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <p class="copy">
+            All Right Reserved @Nayem's Canvas
+        </p>
+    </footer>
+</body>
+</html>

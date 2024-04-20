@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice | Day 9 | CSS - Frontend Journey | Web Development</title>
+    <!--Today 31 March 2024-->
+    <!--
+        From 3:00:00
+        To 3:40:00
+        Learnt image-sprite, transition, transform, animation and more
+    -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent{
+            display: flex; justify-content: center; padding-top: 80px;
+        }
+        .box{
+            height: 150px; width: 150px; background-color: tomato; margin: 30px;
+        }
+        .box:first-child{
+            transform: rotate(45deg);
+        }
+        .box:nth-child(2){
+            transform: scale(0.5);
+        }
+        .box:nth-child(3){
+            transform: skew(-20deg);
+        }
+        .box:last-child{
+            transform: translate(50px, 50px);
+        }
+        .box-2{
+            width: 200px; height: 200px; background-color: green; transition: 1s; margin: 60px auto;
+        }
+        .box-2:hover{
+            border-radius: 50%;
+            transform: scale(1.5);
+            background-color: red;
+        }
+        .box-3{
+            width: 200px; height: 200px; background-color: red; position: relative; left: 0;
+            animation-name: leftRight; animation-duration: 5s; animation-timing-function: ease; animation-iteration-count: 3; animation-delay: 1s; animation-direction: alternate;
+        }
+        @keyframes leftRight{
+            0%{
+                background-color: red; left: 0;
+            }
+            25%{
+                background-color: green; left: 15%;
+            }
+            50%{
+                background-color: blue; left: 30%;
+            }
+            75%{
+                background-color: gray; left: 60%;
+            }
+            100%{
+                background-color: purple; left: 82%;
+            }
+        }
+        .line{
+            margin: 100px auto; width: 90%; border-top: 2px solid black; position: relative;
+        }
+        .wheel{
+            height: 50px; width: 50px; background: url('/media/wheel.png') no-repeat;
+            position: absolute; top: 0; border: 1px solid #eee; top: -55px;
+            animation-name: rounding; animation-duration: 10s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate;
+        }
+        @keyframes rounding{
+            0%{
+                top: -60px; left: 0; transform: rotate(2060deg);
+            }
+            25%{
+                left: 50%;
+            }
+            50%{
+                left: 95%; top: -60px;
+            }
+            51%{
+                top: 10px;
+            }
+            75%{
+                top: 10px; left: 50%;
+            }
+            100%{
+                left: 0; top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    </div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+    <div class="line">
+        <div class="wheel"></div>
+    </div>
+    <p style="margin: 100px auto;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, corporis! Non blanditiis quos dolorum cupiditate consequatur minus nihil, magni dignissimos.</p>
+</body>
+</html>
