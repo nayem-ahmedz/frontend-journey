@@ -14,9 +14,9 @@ let num2 = 9999999999999999;
 console.log(num2); // why result is chnaged? because value is large enough for type = number
 let num3 = 9999999999999999n; //becomes bigInt
 console.log(num3 + ' and type of this varibale is : ' + typeof num3);
-let num4 = BigInt(9999999999999999);
+let num4 = BigInt('9999999999999999');
 console.log('Defined with BigInt() ' + num4 + ' type is : ' + typeof num4);
-//you can work on floating point while using bigInt, also cannt mixup with other type such as number
+//you cannot work on floating point while using bigInt, also cannt mixup with other type such as number   ###console.log(5 + num4);
 console.log(9n / 5n ); //why it is not 1.8? because bigInt
 let num5 = BigInt(age);
 console.log(num5);
