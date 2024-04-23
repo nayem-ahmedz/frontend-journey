@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 | JS Function (Map, and Arrow + Nested)</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="number" id="number" name="number">
+    <button type="button" onclick="sqrtFun()">Square Root?</button>
+    <p id="result" style="display: inline-block;"></p>
+    
+
+
+    <script>
+        function sqrtFun(){
+            let a = document.getElementById('number').value;
+            document.getElementById('result').innerHTML = 'Result is : ' + a*a;
+        }
+    </script>
+    <script src="day-8.js"></script>
+</body>
+</html>

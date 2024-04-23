@@ -28,3 +28,30 @@ function greet(firstName2){
 greet('Nayem');
 
 
+
+
+// --------------------Practice on next Day -----------------------------------
+/*
+let numbers = [1, 2, 4, 3];
+let sqrt = numbers.map(function(number){
+    return number * number;
+});
+console.log(sqrt);
+// map method creates a new array by applying a function to each element of the original array
+let names = ['Nayem', 'Hajifa', 'Jui'];
+let greetings = names.map(function(string){
+    return 'Dear ' + string;
+});
+console.log(greetings);
+
+let add = (x,y) => x + y;
+console.log(add(2, 5));
+
+function welcome(firstName){
+    function sayHello(){
+        console.log('Welcome ' + firstName);
+    }
+    return sayHello();
+};
+welcome(names[1]);
+*/
