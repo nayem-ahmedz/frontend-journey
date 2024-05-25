@@ -23,7 +23,7 @@ true && true == true, otherways false
 true || false == true, only false || false == false
 ! Logical not, alternative/opposite result
 */
-console.log(5**2); //sqrt
+console.log(5**2); //base ** exponent
 let t1 = 5, t2 = 6;
 let ter = t1 > t2 ? true : false; //ternary op
 console.log(ter);

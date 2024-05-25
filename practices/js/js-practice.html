@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number : Even or Odd ?</title>
+    <style>
+        body{
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        .box{
+            text-align: center; max-width: 700px; border: 1px solid blue; border-radius: 10px; padding: 20px;
+        }
+        input{
+            display: block; margin: 20px auto; padding: 10px; text-align: center;
+        }
+        input[type="number"]{
+            width: 80%;
+        }
+        input[type="button"]:active{
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Find weather a number is Even or Odd</h2>
+        <input type="number" id="number" name="number" placeholder="Enter a value">
+        <input type="button" value="Submit" onclick="getResult()">
+        <p id="result" style="visibility: hidden;">result</p>
+    </div>
+    <script>
+        function getResult(){
+            let text = 'The number is ';
+            let result = document.getElementById('result');
+            let number = document.getElementById('number').value;
+            result.style.visibility = 'visible';
+            if(!number){
+                result.innerHTML = 'Please insert a value';
+            } else{
+                if(number % 2 == 0){
+                    result.innerHTML = text + 'Even';
+                    result.style.color = 'green';
+                } else{
+                    result.innerHTML = text + 'Odd';
+                    result.style.color = 'red';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
