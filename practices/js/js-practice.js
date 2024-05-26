@@ -154,7 +154,46 @@ console.log(fName === lName ? true : false); */
 
 
 
-//day-5
+/* day-5
+let mySelf = 'My name is \'Nayem Ahmed\'.';
+console.log(mySelf);
+let fName = 'Nayem';
+let mySelf2 = `My first name is ${fName}`;
+console.log(mySelf2);
+let age = 10, age2 = 20;
+let calc = age + age2 + fName + age + age2;
+console.log(calc);
+console.log(typeof age, typeof(calc));
 
+let num = 1234567891234567;
+console.log(num);
+let num2 = 12345678912345678n; //becomes bigint
+console.log(num2);
+let num3 = BigInt('1234567891234567');
+console.log(typeof num3);
+//console.log(5 + num3); error, cannot mixup bigint with others
+let num4 = BigInt(num);
+console.log(num4);
+let x;
+console.log('type is : ' + typeof x + ' Value is : ' + x);
+let xx = null;
+console.log('type is : ' + typeof xx + ' Value is : ' + xx);
+let people = ['Nayem', 'Hajifa'];
+console.log(people);
+people[2] = 'Ahmed';
+console.log(people);
+console.log(typeof people);
+console.log('-----------------------------');
+let dType = [1, 2n, 'string', true, undefined, null, ['Nayem', 'Hajifa'], { name: 'Nayem', age: 23 }];
+console.log(dType);
+let student = {
+    name: 'Nayem',
+    year: '3rd'
+};
+console.log(student);
+console.log(typeof student); */
+
+
+//day 6
 
 
