@@ -194,6 +194,43 @@ console.log(student);
 console.log(typeof student); */
 
 
-//day 6
+/* day 5v2
+function fun(){
+    console.log('hello my function');
+}
+fun();
+//function: type 1 : code-driven invocation
+function printMySelf(name, age, home='Sylhet'){
+    console.log('hello! I am', name, 'and I\'m', age, 'years old. I live at', home );
+}
+printMySelf('Nayem Ahmed', 23, 'Bhadeshwar');
+printMySelf('Hajifa Jui', 23);
+
+//function : type-2 : event-driven invocation
+//check doc 5
+
+//function : type-3 : Automatice (self-invoked) invocation
+(function(){
+    console.log('Automatically called function');
+})();
+(function(message){
+    console.log(`This is the ${message}`);
+})('event');
+
+//function expression
+let maths = function(x, y){
+    //console.log(x*y); X
+    return x * y; //if you dont return, js will by itself :: return undefined
+}
+console.log(maths(4, 3));
+console.log(maths, typeof maths);
+
+function fun2(){
+    var f1 = 'Nayem';
+    let f2 = 'Ahmed';
+    console.log(f1, f2);
+}
+//console.log(f2); variable declared in fucntion cannot be used outside, even var
+fun2(); */
 
 

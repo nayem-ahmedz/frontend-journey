@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 5 | JS Operator | 19 April 2024</title>
     <style>
-        #subs{
+        #subs-btn{
             padding: 20px 45px; color: white; background-color: red; border: 0; border-radius: 10px; font-size: 18px;
         }
     </style>
 </head>
 <body>
     <p id="userInput"></p>
-    <button id="subs">Subscribe</button>
+    <button id="subs-btn">Subscribe</button>
     <script>
-        function isSubs(){
-        console.log('Subscribed');
-        }
-        document.getElementById('subs').addEventListener('click', isSubs);
+        // function isSubs(){
+        // console.log('Subscribed');
+        // }
+        // document.getElementById('subs').addEventListener('click', isSubs);
         //let uI = prompt();
         //document.getElementById('userInput').innerHTML = uI;
+        function subscribe(){
+            console.log('Subscribed');
+        }
+        document.getElementById('subs-btn').addEventListener('click', subscribe);
     </script>
     <script src="day-5v2.js"></script>
 </body>
