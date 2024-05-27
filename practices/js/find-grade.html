@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Grade of a student</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0; display: flex; min-height: 100vh; justify-content: center; align-items: center;
+        }
+        .box{
+            max-width: 700px; width: 400px; border: 1px solid blue; border-radius: 10px;
+            padding: 20px; text-align: center;
+        }
+        input[type="number"]{
+            display: block; padding: 10px; width: 100%; text-align: center;
+        }
+        #submit-btn{
+            display: block; padding: 5px 10px; margin: 20px auto auto;
+        }
+        #submit-btn:active{
+            transform: scale(0.85);
+        }
+        #result{
+            visibility: hidden; color: green; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Find Grade of a student</h2>
+        <input id="marks" type="number" name="marks" placeholder="Input the marks">
+        <button type="button" id="submit-btn" onclick="getResult()">Get Grade</button>
+        <p id="result">Result :</p>
+    </div>
+    <script src="find-grade.js"></script>
+</body>
+</html>
