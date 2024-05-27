@@ -9,13 +9,25 @@
     </style>
 </head>
 <body>
-    <button id="clickMe">Click Me!</button>
-    <script>
+    <!--
+        old code is replaced with new one during practice-js on 27 May 2024
+        <button id="clickMe">Click Me!</button>
+        <script>
         let fname = 'Nayem';
         function clicked(){
             alert('You clicked me! ' + fname);
         }
         document.getElementById('clickMe').addEventListener('click', clicked);
+        </script>
+    -->
+    <button id="click-btn">Click Me!</button>
+    <script>
+        let fName = prompt('Enter Your Name : ');
+        function clicked(){
+            alert('You clicked me ' + fName);
+        }
+        let btn = document.getElementById('click-btn');
+        btn.addEventListener('click', clicked);
     </script>
     <script src="day-6.js"></script>
 </body>

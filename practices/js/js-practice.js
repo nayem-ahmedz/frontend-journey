@@ -233,4 +233,67 @@ function fun2(){
 //console.log(f2); variable declared in fucntion cannot be used outside, even var
 fun2(); */
 
+/* day-6 (practice for previous day)
+let fName = 'Nayem';
+console.log(`My first name is ${fName}`);
+let array = [ 1.5, BigInt('5'), true, undefined, null, 'String', [1, 'two', true], { name: 'Nayem', age: 23}];
+console.log(array);
+
+function display(name, age, birthYear=2001){
+    console.log(`Name is ${name}, Age is ${age}, birthyear is ${birthYear}`);
+}
+display('Nayem', 23, 2000);
+display('Hajifa', 22);
+display('Sayem');
+
+(function(message){
+    console.log('Here is the ' + message);
+})('Automatically Invoked Function');
+
+let maths = function(x, y){
+    return x + y;
+}
+console.log(maths(2, 3));
+console.log(maths, typeof maths);
+function fun3(){
+    var a = 5;
+    let b = 6;
+    return(a*b);
+}
+console.log(fun3()); */
+
+
+/* //day - 7
+let numbers = [1, 2, 3, 4, 5];
+let square = numbers.map(function(number){
+    return number * number;
+});
+console.log(square);
+
+//c type approach
+let sQ = [];
+for(let i=0; i<numbers.length; i++){
+    sQ[i] = numbers[i] * numbers[i];
+}
+console.log(sQ);
+let names = ['Nayem', 'Saadath', 'Rayhan'];
+let NAMES = names.map(function(name){
+    return 'Mr ' + name;
+});
+console.log(NAMES);
+//arrow function
+let add = (x, y) => x + y;
+console.log(add(9, 5));
+
+//nested function
+function greet(name){
+    function sayHello(){
+        console.log('Hello Mr ' + name);
+    }
+    return sayHello();
+}
+greet(names[0]); */
+
+//day -8
+
 
