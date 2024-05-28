@@ -294,6 +294,63 @@ function greet(name){
 }
 greet(names[0]); */
 
-//day -8
+/* //day -8
+const mobile = {
+    name: 'Samsung',
+    model: 'F22',
+    price: 22000,
+    hasFinger: true,
+    'Selfie Camera': '48MP'
+};
+console.log(mobile['Selfie Camera']);
+const newSymbol = Symbol('Kaisloth-1');
+const student = {
+    name: 'Hajifa Jui',
+    age: 23,
+    [newSymbol]: 'chikani'
+};
+console.log(student[newSymbol]);
+console.log(student);
+student.name = 'Begum';
+console.log(student);
+Object.freeze(student);
+student.name = 'Changed to :: Jui';
+console.log('After using Object.freeze() : ', student);
+console.log(student['name']);
+console.log(student.hasOwnProperty('name'));
+console.log(student.hasOwnProperty('birthYear'));
 
+console.log(Object.keys(student));
+console.log(Object.values(student));
+const car = {
+    name: 'Toyota',
+    price: 2000,
+    getDetails: function(){
+        return `The price of ${this.name} is ${this.price} Euro`;
+    }
+}
+console.log(car.getDetails());
+console.log(car);
+
+const obj1 = {
+    a: 0,
+    b: 1,
+    c: 2
+};
+const obj2 = {
+    d: 3,
+    e: 4,
+    f: 5
+};
+const obj3 = {
+    g: 6,
+    h: 7,
+    i: 8
+};
+const objFinal = {obj1, obj2};
+console.log(objFinal);
+//const objFinal2 = Object.assign(obj1, obj2);
+const objFinal2 = Object.assign({}, obj1, obj2);
+console.log(objFinal2);
+console.log(obj1, 'And', obj2); */
 

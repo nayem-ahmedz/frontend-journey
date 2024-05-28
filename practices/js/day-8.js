@@ -1,6 +1,6 @@
 //till 3:39:00 learnt JS Objects
 
-//use const to declare object; consider best practice
+//use const to declare object; considered best practice
 const mobile = {
     name: 'Samsumg',
     model: 'F22',
