@@ -354,3 +354,40 @@ const objFinal2 = Object.assign({}, obj1, obj2);
 console.log(objFinal2);
 console.log(obj1, 'And', obj2); */
 
+/* //day-9
+const Sym = Symbol('kaisloth');
+const student = {
+    name: 'Hajifa Jui',
+    age: 23,
+    'love whom': 'Nayem',
+    [Sym]: 'chikani',
+    getDetails: function(){
+        return `The name is ${this.name} and age is ${this.age}`;
+    }
+};
+console.log(student);
+console.log(student.getDetails());
+console.log(student['love whom']);
+console.log(student[Sym]);
+console.log(student.hasOwnProperty('name'));
+console.log(student.hasOwnProperty('birthYear'));
+const obj1 = {
+    a: 0,
+    b: 1,
+    c: 2
+};
+const obj2 = {
+    x: 0,
+    y: 1,
+    z: 2
+};
+const objFinal = Object.assign({}, obj1, obj2);
+console.log(obj1, obj2);
+console.log(objFinal);
+console.log(Object.keys(objFinal));
+console.log(Object.values(objFinal));
+
+//end of practice from previous notes on 29th May 2024 */
+
+
+//new practice
