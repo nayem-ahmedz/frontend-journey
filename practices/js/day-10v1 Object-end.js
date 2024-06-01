@@ -37,4 +37,20 @@ const person2 = new Person();
 console.log(person1);
 console.log(person2);
 
+function Student(name, age, status){
+    this.name = name,
+    this.age = age,
+    this.status = status
+};
+const s1 = new Student('Nayem', 24, 'active');
+const s2 = new Student('Hajifa', 23, 'active');
+s1.address = 'Bhadeshwar';
+console.log(s1, s2);
+// const student = {
+//     name: 'Nayem Ahmed',
+//     age: 24
+// };
+// console.log(student);
 
+//In js we can take object in two ways 1. Object literal 2. Object Constructor
+//viba Q, sigle tone kotay take? only in object constructor
