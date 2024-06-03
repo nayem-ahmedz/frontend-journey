@@ -8,7 +8,7 @@
 <body>
     <!-- Practice on 1 June 2024 -->
     <h2>HTML Forms</h2>
-    <form action="action-page.php" method="get" name="form1" autocomplete="off"> <!--novalidate attibute-->
+    <form action="action-page.php" method="get" name="form1" autocomplete="off" oninput="x.value = parseInt(a.value) + parseInt(b.value)"> <!--novalidate attibute-->
         <label for="fname">First Name</label> <br>
         <input type="text" id="fname" name="fname"> <br>
         <label for="lname">Last Name</label> <br>
@@ -27,7 +27,41 @@
         <input type="checkbox" id="vehicle2" name="vehicle2" value="car"> <label for="vehicle2">Car</label> <br>
         <input type="checkbox" id="vehicle3" name="vehicle3" value="boat"> <label for="vehicle3">Boat</label> <br><br>
 
+        <label for="cars">Select a Car</label>
+        <select id="cars" name="cars">
+        <!--
+            size="2" to select visible values
+            use multiple to let user multiple values
+
+        -->
+            <option value="volvo">Volbo</option>
+            <option value="fiat" selected>Fiat</option>
+            <option value="pajero">Pajero</option>
+        </select> <br><br>
+
+        <label for="message">Write a message</label> <br>
+        <textarea id="message" rows="5" cols="30" style="height: auto; width: auto;"></textarea> <br><br>
+
+        <fieldset>
+            <legend>Security</legend>
+            <input type="password" id="password" name="password"> <br><br>
+            <input type="re-password" id="re-password" name="re-password">
+        </fieldset> <br><br>
+
+        <input list="browsers" name="browsers">
+        <datalist id="browsers">
+            <option value="crome"></option>
+            <option value="firefox"></option>
+            <option value="mozila"></option>
+        </datalist> <br><br>
+        0 <input type="range" id="a" name="a" value="0"> 100 + <input type="number" id="b" name="b" value="50"> = <output name="x" for="a b"></output> <br><br>
+
+        <button type="button" onclick="alert('You clicked me!')">Click me</button>
         <input type="submit" value="Submit">
+        <!--
+            form => oninput=""
+            output is used to display result of calculation
+        -->
     </form>
 </body>
 </html>
