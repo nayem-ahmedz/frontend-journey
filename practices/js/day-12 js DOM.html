@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-12 | JS Practice</title>
+    <script src="https://kit.fontawesome.com/e54598ab59.js" crossorigin="anonymous"></script>
+    <style>
+        #like-btn, .btn{
+            margin: 20px 10px; display: block; padding: 10px 20px; background-color: #eee; font-size: 16px; border: 1px solid gray; border-radius: 10px; transition: 0.5s; cursor: pointer;
+        }
+        #like-btn:hover{
+            background-color: black; color: white;
+        }
+        #like-btn > i{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <button id="like-btn" onclick="like()">
+        <i class="fa-regular fa-thumbs-up"></i> Like 0
+    </button>
+    <button id="dbl-btn" ondblclick="dblClick()" class="btn">
+        Click me!
+    </button>
+    <button id="right-btn" oncontextmenu="rightClick()" class="btn">
+        Right Click!
+    </button>
+    <button class="btn" onmouseenter="alert('Your\'e on me!');">
+        Hover Me!
+    </button>
+    <button class="btn" onmouseout="alert('Did you touch me?');">Hey Sweety</button>
+    <p>
+        using onmouseout you can check impressions, such as how many people almost come to click on a button for example Buy Now and then move back, without clicking
+    </p>
+    <script src="day-12.js"></script>
+</body>
+</html>

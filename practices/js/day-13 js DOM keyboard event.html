@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-13 | JS</title>
+    <style>
+        button, input[type="submit"]{
+            border: 1px solid gray; border-radius: 10px; padding: 10px; display: block; margin: 15px auto;
+        }
+        #form1{
+            width: 40%; margin: 20px auto; border: 1px solid; padding: 20px;
+        }
+        #form1 > input:not(input[type="submit"]){
+            width: 90%; padding: 10px;
+        }
+        #form1 label{
+            display: block; margin: 10px auto;
+        }
+        input[type="submit"]{
+            margin: 10px 0; padding: 5px 10px; font-size: 16px;
+        }
+        #loadStatus{
+            display: none;
+        }
+    </style>
+</head>
+<body > <!-- onload="onLoad()", onresize, onscroll,  -->
+    
+    <!-- function: 1. onkeypress
+                    2. onkeyup (it include shift key up lol)
+                    3. onkeydown
+
+        **body > onload (only in body, onload => run a function after website loaded succ)   
+    -->
+    <p id="loadStatus">Website is succefully loaded</p>
+    <form id="form1" onkeypress="keyPress()" >
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <label for="password">Password</label>
+        <input type="password" name="psw" id="password" placeholder="Your Password">
+        <input type="submit" value="submit">
+    </form>
+
+
+
+    <!-- <button id="like-btn" onclick="like()">
+        Like me!
+    </button>
+    <button id="dbl-btn" ondblclick="dblClick()">
+        double click!
+    </button>
+    <button id="right-btn" oncontextmenu="context()">Right click</button>
+    <button id="hover-btn" onmouseenter="hover()">Hover Me!</button>
+    <button id="hover-out-btn" onmouseout="hoverOut()">Hover Out</button> -->
+
+    <script src="day-13.js"></script>
+</body>
+</html>

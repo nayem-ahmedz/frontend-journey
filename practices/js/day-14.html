@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-14 | JS DOM</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        input{
+            margin: 5px auto; padding: 10px;
+        }
+        #message{
+            position: fixed; top: 10px; right: 10px; background-color: red; padding: 10px 20px; height: 30px; width: 150px; text-align: center; color: white;
+        }
+        form{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body onload="fun()" onresize="fun2()" onscroll="fun3()">
+    <p id="message"></p>
+    <form onkeypress="keyPress()">
+        <input type="text" id="name" name="name" placeholder="Your Name"> <br>
+        <input type="text" id="email" name="email" placeholder="Your email"> <br>
+        <input type="submit" value="send">
+    </form>
+    
+    <script src="day-14.js"></script>
+</body>
+</html>

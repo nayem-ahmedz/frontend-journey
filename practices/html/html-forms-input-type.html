@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form : Input Types</title>
+</head>
+<body>
+    <form>
+        <label for="full-name">Full Name</label> <br>
+        <input type="text" id="full-name" name="fullName"> <br>
+        <label for="psw">Password</label> <br>
+        <input type="password" id="psw" name="psw"> <br>
+        <label for="gender">Select Gender</label> <br>
+        <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label> <br>
+        <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label> <br>
+        <input type="radio" id="others" name="gender" value="others"> <label for="others">Others</label> <br>
+
+        <label for="vehicle">Select your vehicles</label> <br>
+        <input type="checkbox" id="bike" name="vehicle1" value="bike"> <label for="bike">Bike</label> <br>
+        <input type="checkbox" id="car" name="vehicle2" value="car"> <label for="car">Car</label> <br>
+
+        <label for="fav-color">Favourite Color</label> <br>
+        <input type="color" id="fav-color" name="favouriteColor"> <br>
+
+        <label for="birthday">Select Birthday</label> <br>
+        <input type="date" id="birthday" name="birthday"> <br>
+
+        <!--You can also use the min and max attributes to add restrictions to dates:-->
+        <label for="datemax">When did Nayem Born? </label> <br>
+        <input type="date" id="datemax" name="birthdayofnayem" max="2002-12-31" min="1999-12-31"> <br>
+
+        <label for="bTime">Birthday time</label> <br>
+        <input type="datetime-local" id="bTime" name="birthdayTime"> <br>
+
+        <label for="email">Email</label> <br>
+        <input type="email" id="email" name="email"> <br>
+
+        <input type="image" src="image1.gif" alt="no-image" width="40" height="40" style="border: 1px solid red; width: 100px; margin: 10px;" title="image as a submit">
+
+        <h1>hey?</h1>
+
+        <br>
+        <input type="button" onclick="alert('clicked!');" value="click me">
+        <input type="reset" value="Clear">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
