@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center;
+    background: linear-gradient(45deg, #ababee, #ceceee);
+}
+section{
+    border-radius: 10px; padding: 20px; text-align: center; background-color: whitesmoke; margin: 15px;
+}
+section > h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; color: blue; margin: 0 auto 50px; font-size: 32px;
+}
+#image{
+    width: 160px; height: auto; border-radius: 10px; transition: 0.5s;
+}
+#dice-btn{
+    display: block; padding: 10px 20px; margin: 20px auto 10px; border: 1px solid blue; border-radius: 10px; font-size: 16px;
+}
+#dice-btn:hover{
+    background-color: blue; color: white;
+}
+#dice-btn:active{
+    transform: scale(0.85);
+}
+#res{
+    visibility: hidden; margin-top: 50px; opacity: 0.8;
+}

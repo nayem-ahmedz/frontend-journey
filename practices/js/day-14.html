@@ -17,16 +17,25 @@
         form{
             padding: 20px;
         }
+        button{
+            padding: 10px 20px; margin: 20px auto; display: block; border: 1px solid gray; border-radius: 10px;
+        }
+        button:hover{
+            background: linear-gradient(45deg, red, rgba(168, 2, 2, 0.731)); color: white;
+        }
     </style>
 </head>
-<body onload="fun()" onresize="fun2()" onscroll="fun3()">
-    <p id="message"></p>
+<body> <!-- onload="fun()" onresize="fun2()" onscroll="fun3()" -->
+    <button id="subs-btn">Subscribe</button>
+    <button id="subs-btn2">Subscribe</button>
+
+    
+    <!-- <p id="message"></p>
     <form onkeypress="keyPress()">
         <input type="text" id="name" name="name" placeholder="Your Name"> <br>
         <input type="text" id="email" name="email" placeholder="Your email"> <br>
         <input type="submit" value="send">
-    </form>
-    
+    </form> -->
     <script src="day-14.js"></script>
 </body>
 </html>
