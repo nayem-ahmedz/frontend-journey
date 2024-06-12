@@ -6,6 +6,7 @@
     <title>Form : Input Types</title>
 </head>
 <body>
+    <!--
     <form>
         <label for="full-name">Full Name</label> <br>
         <input type="text" id="full-name" name="fullName"> <br>
@@ -26,7 +27,7 @@
         <label for="birthday">Select Birthday</label> <br>
         <input type="date" id="birthday" name="birthday"> <br>
 
-        <!--You can also use the min and max attributes to add restrictions to dates:-->
+        You can also use the min and max attributes to add restrictions to dates: 
         <label for="datemax">When did Nayem Born? </label> <br>
         <input type="date" id="datemax" name="birthdayofnayem" max="2002-12-31" min="1999-12-31"> <br>
 
@@ -45,5 +46,60 @@
         <input type="reset" value="Clear">
         <input type="submit" value="Submit">
     </form>
+    -->
+
+    <form>
+        <label for="name">Name</label> <br>
+        <input type="text" id="name" name="name" value="not required" readonly> <br>
+
+        <label for="age">Age</label> <br>
+        <input type="number" id="age" name="age" min="10" max="50" step="10"> <br>
+
+        <label for="password">Password</label> <br>
+        <input type="password" id="password" name="password"> <br>
+
+        <label for="gender">Gender</label> <br>
+        <input type="radio" id="male" name="gender" value="male" checked> <label for="male">Male</label> <br>
+        <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label> <br>
+
+        <label for="color">Favourite Color</label> <br>
+        <input type="color" name="fav_color" id="color"> <br>
+
+        <label for="birthday">Date of Birth</label> <br>
+        <input type="date" id="birthday" name="birthday" min="2000-12-16" max="2001-12-16"> <br>
+        <label for="birthday2">Date of Birth, with Time</label> <br>
+        <input type="datetime-local" id="birthday2" name="birthday2"> <br>
+
+        <label for="files">Select a File</label> <br>
+        <input type="file" id="files" name="file" disabled> <br>
+
+        <label for="bMonth">B Month</label> <br>
+        <input type="month" id="bMonth" name="bMonth"> <br>
+
+        <label for="volume">Set Volume</label> <br>
+        <input type="range" id="volume" name="volume" min="40" max="80" step="10"> <br>
+
+        <label for="gsearch">Search</label> <br>
+        <input type="search" id="gsearch" name="gsearch"> <br>
+
+        <label for="mobile">Mobile</label> <br>
+        <input type="tel" id="mobile" name="mobile" pattern="[8]{2}-[0-9]{11}"> <br>
+
+        <label for="time">Today time</label> <br>
+        <input type="time" id="time" name="time"> <br>
+
+        <label for="url">Add your homepage</label> <br>
+        <input type="url" id="url" name="url"> <br>
+
+        <label for="week">Week</label> <br>
+        <input type="week" id="week" name="week">
+
+        <hr>
+        
+        <input type="reset" value="Clear">
+        <input type="button" onclick="alert('You clicked me!')" value="Click Me">
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 </html>

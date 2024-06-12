@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Data types</title>
+</head>
+<body>
+    <h1>JS Data Types</h1>
+    <h3>JavaScript has several data types that can be broadly categorized into two groups</h3>
+    <ol>
+        <li>Primitive (number, string, boolean, null, undefined, symbol, bigInt)</li>
+        <li>Non-Primitive (object, array, function, date, etc)</li>
+    </ol>
+    <h2>Lets check it out</h2>
+    <h3>Primitive Data Types : </h3>
+    <ul class="p-data">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <h3>Non-Primitive Data Types : </h3>
+    <ul class="nonP-data">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        //showing primitive data types
+        const pDataTypes = ['number', 'string', 'boolean', 'null', 'undefined', 'symbol', 'bigInt'];
+        let i=0;
+        const pData = document.getElementsByClassName('p-data')[0];
+        const liE = pData.getElementsByTagName('li');
+        for(i=0; i<pDataTypes.length; i++){
+            liE[i].innerHTML = pDataTypes[i];
+        }
+
+        //showing non-primitive data types
+        const nonPDT = ['object', 'array', 'function', 'date etc'];
+        const nonPData = document.querySelector('.nonP-data'); //(#id) (.class); return 1, first match
+        //console.log(nonPData);
+        const liE2 = nonPData.querySelectorAll('li'); //return all 
+        for(i=0; i<nonPDT.length; i++){
+            liE2[i].textContent = nonPDT[i];
+        }
+    </script>
+</body>
+</html>

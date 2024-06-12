@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Query Selector</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #field > div{
+            background-color: gray; margin: 5px; display: inline-block; text-align: center; padding: 10px; border-radius: 50%; transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h3>Lets create li items of a empty &lt; ol &gt; tag</h3>
+    <button onclick="newElement()">Click to add new items</button>
+    <p>Order List</p>
+    <ol id="order-list"></ol>
+
+    <h3>Create new circle boxs</h3>
+    <button onclick="newBox()">New Box</button>
+    <div id="field"></div>
+
+    <script>
+        let i=1, j=1;
+        function newElement(){
+            const ol = document.querySelector('#order-list');
+            const newItems = document.createElement('li');
+            newItems.textContent = 'New Items ' + i++;
+            ol.appendChild(newItems);
+        }
+        // function newBox(){
+        //     const field = document.querySelector('#field');
+        //     const newBox = document.createElement('div');
+        //     newBox.textContent = j++;
+        //     field.appendChild(newBox);
+        // }
+        // for(i=0; i<100000; i++){
+        //     //newBox();
+        //     const field = document.querySelector('#field');
+        //     const newBox = document.createElement('div');
+        //     newBox.textContent = j++;
+        //     field.appendChild(newBox);
+        // }
+        function newBox(){
+            for(i=0; i<100000; i++){
+            //newBox();
+            const field = document.querySelector('#field');
+            const newBox = document.createElement('div');
+            newBox.textContent = j++;
+            field.appendChild(newBox);
+        }
+        }
+    </script>
+</body>
+</html>

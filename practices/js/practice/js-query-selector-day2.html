@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS query selector</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #formDiv{
+            padding: 15px; width: 350px; border: 1px solid blue; margin: 10px auto; 
+        }
+        #formDiv > form > input{
+            display: block; margin: 5px auto; width: 80%; padding: 10px 20px;
+        }
+        #next-btn, #send-btn{
+            width: fit-content !important; margin-top: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <h3>Bangladesh has 8 Districts. Some of them are : </h3>
+    <ol id="districts"></ol>
+    <div id="formDiv">
+        <form id="myForm">
+            <input type="email" id="email" name="email" placeholder="your-email@mail.com">
+            <input type="button" onclick="nextField()" value="Next" id="next-btn">
+        </form>
+    </div>
+
+    <script>
+        /*
+        //      query selector
+        //const diLi = document.querySelectorAll('#districts li');
+        //console.log(diLi); //node list (2)
+        //console.log(diLi[0].textContent);
+        //console.log(diLi[1].textContent);
+        
+        //      class selector
+        const dis = document.getElementById('districts');
+        const disLi = dis.getElementsByTagName('li');
+        //console.log(disLi); //html collection (2)
+        console.log(disLi[0].textContent); */
+
+        const disNames = ['Dhaka', 'Sylhet', 'Khulna', 'Barishal', 'Chittagong', 'Natore etc'];
+        const districts = document.getElementById('districts');
+        for(let i = 0; i < disNames.length; i++){
+            const list = document.createElement('li');
+            list.textContent = disNames[i];
+            districts.appendChild(list);
+        }
+        function nextField(){
+            const form = document.getElementById('myForm');
+            const newField = document.createElement('input');
+            form.appendChild(newField);
+            document.getElementById('email').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
