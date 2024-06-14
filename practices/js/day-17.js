@@ -6,7 +6,7 @@ console.log(myDate); //this will show date in console as normal, oneline in term
 console.log(myDate.toString()); //use this to view date normally in terminal
 console.log(typeof myDate);
 console.log(myDate.toDateString());
-console.log(myDate.toLocaleString());
+console.log(myDate.toLocaleString());   
 console.log(myDate.toLocaleString('default', {
         weekday: 'long' //try 'short'
     }

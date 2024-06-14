@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class</title>
+</head>
+<body>
+    
+    <script>
+        //object and constructors
+        function Person(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        const p1 = new Person('Nayem', 23);
+        const p2 = new Person('Hajifa', 22);
+        p1.nationality = 'Bangladeshi';
+        console.log(p1);
+        console.log(p2);
+        Person.prototype.status = true; //adding new key in object (only using prototype)
+        const p3 = new Person('Ahmed', 23, false);
+        console.log(p3);
+        Person.prototype.getStatus = function(status){
+            if(this.status === true){
+                return 'active';
+            } else{
+                return 'inactive';
+            }
+        } //adding new method in already created object (only using prototype)
+        console.log(p1.getStatus());
+        p3.status = false;
+        console.log('P3 is', p3.getStatus());
+
+
+        //JS Class
+        class Car {
+            constructor(name, type, year){
+                this.name = name;
+                this.type = type;
+                this.year = year;
+            }
+            age(){
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+            getPrice(price){
+                return 'The Price of my car is : ' + price * 1234 + ' USD';
+            }
+        }
+        const c1 = new Car('Toyota', 'four wheeler', 2015);
+        console.log(c1);
+        console.log('car age :', c1.age(), 'years');
+        console.log(c1.getPrice(10));
+
+        //class inheritance
+        class Model extends Car{
+            constructor(name, type, year, model){
+                super(name, type, year);
+                this.model = model;
+            }
+            getModel(){
+                return `The model of the ${this.name} is ${this.model}.`;
+            }
+        }
+        let myCar = new Model('ToyotaX', 'four wheeler', 2021, 'T001-XV');
+        console.log(myCar);
+        console.log(myCar.getModel());
+        console.log(myCar.age());
+
+        //class is modern approach with inheritance feature using extends, super
+        //constructor function is older way to acchive same goal, avoid it for cleaner, more readibility 
+    </script>
+</body>
+</html>
