@@ -8,7 +8,101 @@
 <body>
     
     <script>
+        //constructor function vs class
+        //practice session 1
+        function Person(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        const p1 = new Person('Nayem', 23);
+        console.log(p1);
+        const p2 = new Person('Hajifa', 22);
+        p1.status = true;
+        console.log(p1);
+        console.log(p2);
+        Person.prototype.nation = 'Bangladesh';
+        console.log(p1);
+        for(let i in p1){
+            console.log(i, ':', p1[i]);
+        }
+        console.log(p1);
+        Person.prototype.getNation = function(nation){
+            return (this.nation);
+        }
+        const p3 = new Person('Mia', 12);
+        p3.nation = 'Indian';
+        //console.log(p3.getNation());
+        for(let i in p3){
+            console.log(i, ':', p3[i]);
+        }
+        console.log(p3.getNation());
+
         
+        //practice session 2
+        class Car {
+            constructor(name, year, price){
+                this.name = name;
+                this.year = year;
+                this.price = price;
+            }
+            Age(){
+                const date = new Date().getFullYear();
+                return 'Car Age : ' + (date - this.year);
+            }
+            setName(name){
+                this.name = name;
+            }
+            getName(){
+                return this.name;
+            }
+            setPrice(price){
+                this.price = price;
+            }
+            getPrice(){
+                return `The price of ${this.name} is USD ${this.price * 1234}`;
+            }
+        }
+        const c1 = new Car('Toyota', 2015, 10);
+        console.log(c1);
+        console.log(c1.Age());
+        console.log(c1.getPrice());
+        c1.setName('BMW');
+        c1.setPrice(20);
+        console.log(c1);
+        console.log(c1.getPrice());
+
+        //inheritance
+        class Model extends Car{
+            constructor(name, year, price, model){
+                super(name, year, price);
+                this.model = model;
+            }
+            setModel(m){
+                this.model = m;
+            }
+            getModel(){
+                return `The model of ${this.name} is ${this.model}`;
+            }
+        }
+        const myCar = new Model('Toyota', 2021, 120, 'AV001X');
+        //myCar.setModel = 'TX001J';
+        console.log(myCar);
+        for(let i in myCar){
+            let cap = i.charAt(0).toUpperCase() + i.slice(1);
+            console.log(cap, ':', myCar[i]);
+        }
+        console.log(myCar.Age())
+        console.log( myCar.getModel());
+        console.log(myCar.getPrice());
+        console.log(document.lastChild);
+
+
+
+
+
+
+
+
 
         // //object and constructors
         // function Person(name, age){
