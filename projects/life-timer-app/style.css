@@ -27,7 +27,7 @@ body{
     transform: scale(1.1);
 }
 .settings{
-    position: absolute; top: 15px; right: 20px; z-index: 1;
+    position: absolute; top: 15px; right: 20px; z-index: 1; color: black;
     display: flex; align-items: center; gap: 1rem;
     width: 32px; overflow: hidden; transition: 0.5s;
 }
@@ -44,7 +44,7 @@ input{
     padding: 10px 20px; font-size: 1rem;
 }
 input[type="date"]{
-    background-color: transparent; border: 1px solid transparent; outline: none;
+    background-color: transparent; border: 1px solid transparent; outline: none; color: black;
 }
 #date:focus{
     border: 1px solid blue;
