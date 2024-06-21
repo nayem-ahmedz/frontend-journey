@@ -8,7 +8,7 @@ function expandSettings(){
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-gear');
     } else{
-        a.style.width = '320px';
+        a.style.width = '325px';
         icon.classList.remove('fa-gear');
         icon.classList.add('fa-xmark');
     }
