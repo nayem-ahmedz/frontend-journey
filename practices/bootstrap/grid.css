@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.myGrid{
+    width: 100%; height: 400px; border: 1px solid; padding: 10px;
+    display: grid; gap: 10px; grid-template-columns: auto auto auto; /* 4 col = 4 auto/width */ grid-template-columns: 200px 400px auto;
+    grid-template-rows: 150px auto 250px; /* chosing row width */
+    justify-content: center; align-items: center;
+}
+.myGrid > div{
+    border: 1px solid; padding: 20px;
+}
+/* .item1{
+    grid-column-start: 1; grid-column-end: 3;
+}
+.item6{
+    grid-column-start: 1; grid-column-end: 3;
+} */
+.item1{
+    grid-row-start: 1; grid-row-end: 3;
+}
+
+.myGrid2{
+    height: 400px; width: 100%; padding: 10px; border: 2px solid red;
+    display: grid; grid-template-columns: auto auto auto; gap: 10px;
+}
+.myGrid2 > div{
+    padding: 10px 20px; border: 1px solid;
+}
+.item-1{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    /* grid-area: 1 / 2 / 5 / 6; // grid-area: 2 / 1 / span 2 / span 3; shorthand for both */
+}
+.item-2{
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+.item-5{
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
