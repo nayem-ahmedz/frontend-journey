@@ -1,0 +1,85 @@
+// Bootstrap 4 and 5 From Youtube : Anisul Hoque dated on 24 June 2024
+
+
+1. connect CDN / Download from getbootstrap.com
+2. add class
+
+BS T4 Container & Grid
+------------------------
+
+Container
+.container = fixed with with margin, center
+.container-fluid = ful width
+
+Grid
+total 12 column in a row
+<div class="row">
+    <div class="col-3">...
+
+use col class to make layout
+Ex <div class="col-xxl-3 col-xl-4 col-md-6">
+
+Here col-sm-12 is not required, BS will automatically set width = 100% when < md
+
+BS T5 Color and Spacing
+-------------------------
+text-primary
+bg-primary
+text-bg-primary ( auto color set based on bg)
+
+Padding
+use p for all side, pt = top, pb = bottom, ps = left, pe = right, py and px
+Responsive padding : <div class="div1 bg-info p-2 p-xl-5"> //from xl padding will be 5
+Rem : first define for smaller screen and then for larger
+
+Margin
+same as p, just use m instead of p
+Responsive Margin : <p class="bg-danger text-warning m-2 m-xl-5">
+here, for smaller screen m-2, from xl it will be 5
+
+
+
+BS T6 Border and images
+-------------------------
+to use border add class = border
+<h1 class="border">Welcome to Bootstrap</h1>
+<h1 class="border border-black">Welcome to Bootstrap</h1>
+
+border-radious: .rounded, rounded-top, rounded-bottom, .rounded-start, .rounded-end
+.rounded-circle = 50%
+
+#Image
+<img src="images.source" class="img-fluid"> //image will be Responsive
+<img src="images.source" class="img-thumbnail"> //looks like a thumbnail
+
+add a rounded border
+<img class="img-fluid rounded-circle border" src="https://nayemscanvas.xyz/assets/gallary/mySelf.png" alt="nayem's image">
+
+to move it to center
+.d-block and .m-auto
+
+
+
+
+BS T7 Fonts and Text
+-------------------------
+Text Classes
+> text-start, text-center, text-end, text-justify
+> text-sm-center 
+
+> text- uppercase/lowercase/capitalize
+
+> text-decoration-none, text-monospace, text-nowrap
+
+Font Classes
+> font-weight bold/bolder/normal/light/lighter
+> font-italic
+> small
+
+
+
+
+
+
+
+

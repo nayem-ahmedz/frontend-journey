@@ -1,7 +1,29 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background: linear-gradient(45deg, #abc, #eee); min-height: 100vh; font-family: arial;
+}
+section{
+    padding: 10px;
+}
 
+/* Skills showoff */
+.circles{
+    width: 95%; margin: auto; box-shadow: 0 0 5px #999; padding: 20px 10px;
+    display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap;
+}
+.outer{
+    padding: 10px; border: 1px solid gray; border-radius: 50%; height: 115px; width: 115px; background: conic-gradient(rgba(0, 0, 255, 0.5) 360deg, #eee 0deg); box-shadow: 0 0 5px gray;
+}
+.inner{
+    border: 1px solid transparent; border-radius: 50%; height: 93px; width: 93px; background-color: #ccc; box-shadow: 0 0 5px rgba(0,0,0,0.6) inset;
+}
+.inner > p{
+    margin: 35px auto; width: fit-content; color: blue;
+}
+
+/* universal style / classes */
 .basic-list{
     list-style-type: circle;
 }
@@ -9,5 +31,17 @@
     display: inline-block; padding: 8px; text-decoration: none;
 }
 .basic-list li a:hover{
-    background-color: black; color: white;
+    background-color: black; color: white; border-radius: 5px;
+}
+.text-center{
+    text-align: center;
+}
+.display-text{
+    font-size: 2rem; margin: 8px auto 15px;
+}
+
+@media screen and (max-width: 767px){
+    section{
+        padding: 5px;
+    }
 }
