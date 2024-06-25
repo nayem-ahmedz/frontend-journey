@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <section>
-        <h1 class="text-center display-text">Frontend Journey</h1>
+    <header>
+        <h1 class="display-text">Frontend Journey</h1>
+        <nav id="nav">
+            <p id="showBar" onclick="showPanel()">☰</p>
+            <p id="hideBar" onclick="closePanel()">X</p>
+            <ul class="top-nav">
+                <li> <a href="/index.html">Home</a> </li>
+                <li> <a href="#">About</a> </li>
+                <li> <a href="#">Portfolio</a> </li>
+                <li> <a href="#">Practices</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="homepage-section">
         <h2>Practice Lists</h2>
         <ul class="basic-list">
             <li> <a href="/practices/html/list.html">HTML</a> </li>
@@ -47,5 +59,10 @@
             </div>
         </main>
     </section>
+    <footer>
+        <p class="text-center">All Right Reserved | @Nayem Ahmed</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="viewSkills"></script>
 </body>
 </html>
