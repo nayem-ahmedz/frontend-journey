@@ -14,7 +14,7 @@ function updateText(){
     if(jobsIndex === jobs.length){
         jobsIndex = 0;
     }
-    setTimeout(updateText, 300);
+    setTimeout(updateText, 350);
 }
 
 updateText();

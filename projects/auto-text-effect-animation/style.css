@@ -20,3 +20,20 @@ body{
 .container > h1, .container > h2{
     font-weight: 500;
 }
+
+/* External Navigation */
+.navigation{
+    position: fixed; top: 5px; right: 10px;
+}
+.nav-list{
+    list-style-type: none;
+}
+.nav-list > li{
+    display: inline-block;
+}
+.nav-list > li > a{
+    display: block; text-decoration: none; padding: 8px 15px; border-radius: 10px; transition: 0.5s; opacity: 0.5;
+}
+.nav-list > li > a:hover{
+    background-color: blue; color: white; opacity: 1.0;
+}
