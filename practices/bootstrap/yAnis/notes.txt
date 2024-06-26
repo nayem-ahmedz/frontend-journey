@@ -76,6 +76,35 @@ Font Classes
 > font-italic
 > small
 
+BS T8 Closeable / Dismissible alert
+------------------------------------
+Full code :
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum dolore, aliquid officia repellendus amet!
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+//include BS5 Js cdn
+
+
+BS T9 <blockquote> and <abbr>
+------------------------------
+<blockquote class="blockquote">
+    <p>
+        content...<abbr title="Bootstrap 5">BS5</abbr>
+    </p>
+    <footer class="blockquote-footer">
+        Nayem Ahmed from <cite>Youtube</cite>
+    </footer>
+</blockquote>
+
+<i class="fas fa-user-circle fa-3x"></i>    //fa-3x = font-size: 3x
+
+
+
+
+
+
+
 
 
 
