@@ -100,7 +100,36 @@ BS T9 <blockquote> and <abbr>
 <i class="fas fa-user-circle fa-3x"></i>    //fa-3x = font-size: 3x
 
 
+BS T10 btn, btn-group, list-group
+---------------------------------
+btn = basic button styles
+btn-primary / btn-link
+btn-outline-primary
 
+size : btn-lg / btn-sm
+
+btn-block + d-grid(parent) to make button full width
+
+*link can be styled as btn = .btn, .btn-primary
+
+Group of some inline buttons
+        <div class="btn-group">
+            <button class="btn btn-outline-success">Basic Styled BS btn</button>
+            <button class="btn btn-outline-primary">Colored btn</button>
+            <button class="btn btn-outline-danger">Outlined btn</button>
+        </div>
+
+List Group == like a table shaped items of List
+            <h3>List of Students</h3>
+            <ul class="list-group">
+                <li class="list-group-item text-bg-success">Nayem Ahmed</li>
+                <li class="list-group-item text-bg-danger">Hajifa Begum</li>
+                <li class="list-group-item text-bg-primary">Ahmed Nayem</li>
+            </ul> 
+
+Btn State : Active / Disabled
+    <button class="btn btn-outline-primary active">Active btn</button>
+    <button class="btn btn-outline-primary disabled">Active btn</button>
 
 
 

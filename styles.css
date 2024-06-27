@@ -82,6 +82,9 @@ footer{
 .blur{
     filter: blur(5px);
 }
+.under-const{
+    text-align: center; color: red;
+}
 
 @media screen and (max-width: 767px){
     section{
