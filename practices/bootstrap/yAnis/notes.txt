@@ -132,6 +132,73 @@ Btn State : Active / Disabled
     <button class="btn btn-outline-primary disabled">Active btn</button>
 
 
+BS T11 collapse and pagination
+------------------------------
+use : pagination > page-item > page-link
+        <footer class="bg-secondary pt-3 d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"> <a href="#" class="page-link">Prev</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">1</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">2</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">3</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">4</a> </li>
+                <li class="page-item"> <a href="#next" class="page-link">Next</a> </li>
+            </ul>
+        </footer>
+
+Collapse learn more>> show/hide
+        <a href="#demo" data-bs-toggle="collapse">Learn more...</a>
+        <div id="demo" class="collapse pb-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque aspernatur, ipsa facilis aliquid consequatur dolor ullam exercitationem quasi doloribus, est, nulla nihil sed odit tempora deleniti. Quisquam quod qui illo officia, temporibus mollitia alias blanditiis nisi, dolorem, veniam rerum dignissimos tempore asperiores magni quos! Natus accusantium voluptates nam repellat repellendus?
+        </div>
+
+BS T12 Navihation Menue : Nav
+------------------------------
+use nav > nav-item > nav-link
+<ul class="nav">
+    <li class="nav-item"> <a href="#" class="nav-link">Home</a> </li>
+    <li class="nav-item"> <a href="#" class="nav-link">About</a> </li>
+    <li class="nav-item"> <a href="#" class="nav-link">Projects</a> </li>
+    <li class="nav-item"> <a href="#" class="nav-link">Contact</a> </li>
+</ul>
+
+
+BS T13 Toggleable dynamic tab / pill
+-------------------------------------
+
+tabs : (btn-outline-primary)
+----------------------------
+use : nav, nav-tabs > navigation > tab-content > tab-pane with id
+note- use nav-tabs for styling like nav of tabs
+code example (only structure)
+    <ul class="nav nav-tabs">
+        <li class="nav-item"> 
+            <a href="#about" class="nav-link active" data-bs-toggle="tab">About</a> 
+        </li>
+        <li class="nav-item"> 
+            <a href="#skills" class="nav-link" data-bs-toggle="tab">Skills</a> 
+        </li>
+        <li class="nav-item"> 
+            <a href="#contact" class="nav-link" data-bs-toggle="tab">Contact</a> 
+        </li>
+    </ul>
+    <div class="tab-content mt-2">
+        <div class="tab-pane fade show active" id="about"></div>
+        <div class="tab-pane fade" id="skills"></div>
+        <div class="tab-pane fade" id="contact"></div>
+    </div>
+
+Pills : same but (btn-primary)
+-------------------------------
+use nav-pills instead of nav-tabs to make it pill (in ul class="")
+and use pill instead of navs in data-bs-toggle (in all a href="")
+
+
+
+
+
+
+
 
 
 
