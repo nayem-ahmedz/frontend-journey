@@ -195,6 +195,12 @@ and use pill instead of navs in data-bs-toggle (in all a href="")
 
 
 
+BS T14 Nav bar == rem
+---------------
+
+
+
+
 
 
 
