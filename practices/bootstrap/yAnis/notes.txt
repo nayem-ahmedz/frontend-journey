@@ -5,10 +5,10 @@
 2. add class
 
 BS T4 Container & Grid
-------------------------
+----------------------
 
 Container
-.container = fixed with with margin, center
+.container = fixed with margin, center
 .container-fluid = ful width
 
 Grid
@@ -64,7 +64,7 @@ to move it to center
 BS T7 Fonts and Text
 -------------------------
 Text Classes
-> text-start, text-center, text-end, text-justify
+> text-start, text-center, text-end (text-justify ! in BS5)
 > text-sm-center 
 
 > text- uppercase/lowercase/capitalize
@@ -72,8 +72,13 @@ Text Classes
 > text-decoration-none, text-monospace, text-nowrap
 
 Font Classes
-> font-weight bold/bolder/normal/light/lighter
-> font-italic
+> font-weight
+    fw-light
+    fw-normal
+    fw-bold
+    fw-bolder
+
+> fst-italic
 > small
 
 BS T8 Closeable / Dismissible alert
