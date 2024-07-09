@@ -9,10 +9,24 @@
         .text-justify{
             text-align: justify;
         }
+        .myNav > li > a:hover{
+            background-color: blue; color: white;
+        }
+        .myPage > li > a:hover{
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
     <div class="container pb-5">
+        <nav class="d-flex justify-content-end bg-d">
+            <ul class="nav myNav">
+                <li class="nav-item"> <a href="#" class="nav-link">Home</a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link">About</a> </li>
+                <li class="nav-item"> <a href="#footer" class="nav-link">Page Bottom</a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link">Contact</a> </li>
+            </ul>
+        </nav>
         <h1 class="text-center">Bootstrap Revesion</h1>
         <div class="row">
             <div class="col-md-6 col-xl-3 p-3 bg-primary"></div>
@@ -72,7 +86,58 @@
         <button class="btn btn-outline-primary disabled">Active btn</button> 
         <p class="text-center p-3 mt-3 text-bg-danger rounded">
             till BS T10
-        </p>       
+        </p>
+        <hr>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorum incidunt animi ut inventore doloremque!
+            <button class="btn btn-close" data-bs-dismiss="alert"></button>
+        </div>      
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tenetur sit fugiat eveniet maiores temporibus non eaque eum, molestiae quasi cumque hic nihil? Quibusdam ad dolores sequi mollitia neque molestiae. <a href="#moreDetails" data-bs-toggle="collapse" class="text-decoration-none">Read more...</a>
+        </p>
+        <p class="collapse" id="moreDetails">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, quibusdam nobis nulla perferendis maiores impedit, quis praesentium eos hic laborum facilis! Voluptatem aspernatur odit veniam assumlorem30 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis molestiae fugiat voluptatum ad, facere quasi iure saepe quod sint reprehenderit officiis dolorem minus molestias quae laudantium vel nam iusto perferendis!
+            enda illo! Fugit, corrupti?
+        </p>
+        <h3>Toggleable Dynamic tab</h3>
+        <ul class="nav nav-pills">
+            <li class="nav-item"> <a href="#one" class="nav-link active" data-bs-toggle="pill">One</a> </li>
+            <li class="nav-item"> <a href="#two" class="nav-link" data-bs-toggle="pill">Two</a> </li>
+            <li class="nav-item"> <a href="#three" class="nav-link" data-bs-toggle="pill">Three</a> </li>
+            <li class="nav-item"> <a href="#four" class="nav-link" data-bs-toggle="pill">Four</a> </li>
+        </ul>
+        <div class="tab-content">
+            <div id="one" class="tab-pane fade show active">
+                <p>
+                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione velit quod quia, officiis perferendis, ea expedita non doloribus quis asperiores facere corporis pariatur reiciendis explicabo? Esse eligendi maxime odio nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quisquam. Nulla quaerat, quos deserunt aliquid distinctio, placeat dolorum aliquam, perspiciatis laudantium saepe pariatur eos illo praesentium officia. Ea, cum numquam.
+                </p>
+            </div>
+            <div id="two" class="tab-pane fade">
+                <p>
+                    2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione velit quod quia, officiis perferendis, ea expedita non doloribus quis asperiores facere corporis pariatur reiciendis explicabo? Esse eligendi maxime odio nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quisquam. Nulla quaerat, quos deserunt aliquid distinctio, placeat dolorum aliquam, perspiciatis laudantium saepe pariatur eos illo praesentium officia. Ea, cum numquam.
+                </p>
+            </div>
+            <div id="three" class="tab-pane fade">
+                <p>
+                    3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione velit quod quia, officiis perferendis, ea expedita non doloribus quis asperiores facere corporis pariatur reiciendis explicabo? Esse eligendi maxime odio nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quisquam. Nulla quaerat, quos deserunt aliquid distinctio, placeat dolorum aliquam, perspiciatis laudantium saepe pariatur eos illo praesentium officia. Ea, cum numquam.
+                </p>
+            </div>
+            <div id="four" class="tab-pane fade">
+                <p>
+                    4. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione velit quod quia, officiis perferendis, ea expedita non doloribus quis asperiores facere corporis pariatur reiciendis explicabo? Esse eligendi maxime odio nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quisquam. Nulla quaerat, quos deserunt aliquid distinctio, placeat dolorum aliquam, perspiciatis laudantium saepe pariatur eos illo praesentium officia. Ea, cum numquam.
+                </p>
+            </div>
+        </div>
+        <hr>
+        
+        <footer class="bg-dark p-3 pb-1 d-flex justify-content-center align-items-center rounded-bottom" id="footer">
+            <ul class="pagination myPage">
+                <li class="page-item"> <a href="#" class="page-link">Prev</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">4</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">5</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">Next</a> </li>
+            </ul>
+        </footer>
     </div>
 
     <!-- Latest compiled JavaScript -->

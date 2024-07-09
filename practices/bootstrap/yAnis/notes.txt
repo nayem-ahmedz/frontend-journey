@@ -147,7 +147,7 @@ use : pagination > page-item > page-link
                 <li class="page-item"> <a href="#" class="page-link">2</a> </li>
                 <li class="page-item"> <a href="#" class="page-link">3</a> </li>
                 <li class="page-item"> <a href="#" class="page-link">4</a> </li>
-                <li class="page-item"> <a href="#next" class="page-link">Next</a> </li>
+                <li class="page-item"> <a href="#" class="page-link">Next</a> </li>
             </ul>
         </footer>
 
