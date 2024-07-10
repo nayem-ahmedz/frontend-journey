@@ -202,8 +202,8 @@ and use pill instead of navs in data-bs-toggle (in all a href="")
 
 BS T14 Nav bar 
 ---------------
-nav .navbar .navbar-expand-sm (expand on sm)
-ul .navbar-nav 
+nav> .navbar .navbar-expand-sm (expand on sm)
+ul> .navbar-nav 
 
 >colorize navbar = .bg-primary, .navbar-dark
 
