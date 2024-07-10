@@ -241,8 +241,42 @@ full codes
 
 
 
-BS T15 :: next ?
+BS T15  Card
+-------------
+.card has 3 part
+
+>card-header
+
+>card-body
+    -card-title -card-text -card-link
+
+>card-footer
+
+code example
+    <div class="card">
+        <div class="card-header">Header</div>
+        <div class="card-body">Body</div>
+        <div class="card-footer">Footer</div>
+    </div>
+
+full code
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="card-image" class="card-img-top">
+        <div class="card-body">
+            <h3 class="card-title">ICT XI-XII</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque placeat error, sequi nisi ut libero natus quo vitae quod. Officia.</p>
+            <a href="https://facebook.com" target="_blank" class="card-link text-decoration-none stretched-link">View this page</a>
+        </div>
+    </div>
+
+use > stretched-link in a to make entire card clickable
+
+
+
+BS T16 :: next?
 ---------------
+
+
 
 
 
