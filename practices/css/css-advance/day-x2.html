@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advance</title>
+    <style>
+        .box1{
+            height: 250px; width: 80%; border: 1px solid gray; margin: 40px auto;
+            border-radius: 10px;
+            background: url('/media/google-logo.png') no-repeat top left, url('/media/bd-flag.png') no-repeat center; display: none;
+            background-size: 150px, cover;
+        }
+        .box2{
+            height: 250px; width: 80%; border: 1px solid gray; margin: 50px auto;
+            background-image: radial-gradient(circle, red 80px, green 10%)
+        }
+        .box3{
+            height: 250px; width: 250px; border: 1px solid gray; margin: 50px auto; border-radius: 50%;
+            background: conic-gradient(from 90deg, red 0deg, white);
+        }
+        .box3:hover{
+            background: conic-gradient(from 90deg, red 180deg, white);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">Bangaldesh Flag</div>
+    <div class="box3"></div>
+</body>
+</html>

@@ -273,9 +273,36 @@ use > stretched-link in a to make entire card clickable
 
 
 
-BS T16 :: next?
----------------
+BS T16 media object
+--------------------
+media object is removed from BS5
+but you can create one using utility Classes
+code example
+    <div class="d-flex align-items-start border p-3 gap-3 rounded">
+        <img src="https://nayemscanvas.xyz/assets/gallary/mySelf.png" style="width: 300px; height: 180px;" class="rounded-circle img-fluid">
+        <div>
+            <h3>I love Programmming</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, omnis debitis accusantium maxime possimus impedit amet sunt nemo cupiditate nesciunt ipsa voluptatum alias quos deserunt quas harum aut itaque explicabo.
+            </p>
+        </div>
+    </div>
 
+
+BS T17 table
+--------------------
+use thead and tbody
+
+.table .table-bordered
+.table-hover
+.table-striped
+
+use table-primary to set background-color-primary
+
+
+
+BS T18 :: next?
+---------------
 
 
 
