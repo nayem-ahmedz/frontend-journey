@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{ font-size: 1.4rem; }
+    </style>
+</head>
+<body>
+    <p id="details"></p>
+    <p id="details2"></p>
+    <p id="output"></p>
+    <script>
+        let name = 'Nayem Ahmed',
+            age = 24;
+        document.getElementById('details').innerHTML = `I am ${name} and ${age} years old`;
+        document.getElementById('details2').innerHTML = name + ' is a student.';
+        console.log(name, age);
+        const cars = ['Toyota', 'BMW', 'Audi'];
+        // document.write('<h3>' + cars + '</h3>');
+        const car = {
+            name: 'Toyota',
+            model: 'T008',
+            price: 2200
+        };
+        let oP = document.querySelector('#output');
+        oP.textContent = `Car : ${car.name} model ${car.model}, will cost $${car.price}.`;
+        //use for in loop to access object key/values
+        for(let i in car){
+            console.log(i +' : ' + car[i]);
+        }
+        car.name = 'Audi';
+        console.log(car.name);
+        console.log(car);
+        car.name = 'CNG'; //object is Reference type
+
+        car.owner = name; //adding new key-value to the object
+        document.write("<p>" + car.owner + "</p>");
+        console.log(car);
+
+        var a = 5;
+        var a = 6; //var can be redecalred while let/const cannot
+        let b = 10; 
+        let globalScope = 'I am var, Global Scope'; 
+        {
+            let a = 9; //block scope
+            const b = 1;
+            console.log("Anywhere : " + globalScope);
+        }
+        {
+            const a = 20;
+            let b = 30;
+            let blockScope1 = 'I am let, block scope';
+            let blockScope2 = 'I am const, block scope';
+            console.log("Inside my boundery : " + blockScope2);
+        }
+        //console.log(blockScope1); // !error
+
+        const PI = 3.1416;
+        {
+            console.log(PI); // PI is declared outside this block, we can use it
+            const SI = Math.floor(PI);
+            console.log(SI);
+        }
+        //console.log(SI); // SI is declared inside function, we cannot use it outside
+
+        //array now
+        console.log(cars);
+        cars[0] = 'Changed';
+        cars.push(true);
+        cars.pop();
+        console.log(cars);
+        // const cars = [1, 2, 3]; //cant redeclare a const Array
+        // cars = [1, 2, 3, 5]; //also reassign is prohibited
+
+        let noncArray = [1, 2, 3];
+        console.log(noncArray);
+        noncArray = [2, 3]; //array declared using let can be reassign (but not redeclared)
+        console.log(noncArray);
+
+        //JS Day-1 from js/practic
+
+        document.write('<h1> JS Day-1 from js/practic </h1>');
+    </script>
+</body>
+</html>
