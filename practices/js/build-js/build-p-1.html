@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build with JS | Page 1 | Dated 22 July 2024</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        p, span{ font-size: 1.5rem; }
+        .boxs{ height: 5px; width: 5px; margin: 5px; display: inline-block; background-color: gray; transition: 2s; }
+        .progressBars{
+            height: 50px; width: 100%; background-color: #eee; margin: 15px auto;
+        }
+        .progress{
+            height: 50px; width: 0; transition: width 2s ease-in-out;
+            font-size: 1.5rem; text-align: right; padding-top: 10px; color: white; overflow: hidden; border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <p id="name-field"></p>
+    <p>
+        Find out the sum of two number
+        <ul>
+            <li class="numbs"></li>
+            <li class="numbs"></li>
+        </ul>
+    </p>
+    <p>
+        Sum is = <span id="sum"></span>
+    </p>
+    <div class="boxs"></div>
+    <div class="boxs"></div>
+    <div class="boxs"></div>
+    <p id="time"></p>
+    <hr>
+    <p>Progress Bars</p>
+    <div class="progressBars">
+        <div class="progress">HTML &NoBreak;&NoBreak; </div>
+    </div>
+    <div class="progressBars">
+        <div class="progress">CSS &NoBreak;&NoBreak;</div>
+    </div>
+    <div class="progressBars">
+        <div class="progress">Javascript &NoBreak;&NoBreak;</div>
+    </div>
+    <p>
+        Handler<br>
+        <input type="range" id="handler" value="0">
+    </p>
+
+
+    <!-- Script file -->
+    <script>
+        let fName = 'Nayem',
+            lName = 'Ahmed';
+        document.getElementById('name-field').innerHTML = fName + ' ' + lName;
+        
+        let numbs = document.getElementsByClassName('numbs');
+        console.log(numbs);
+        for(let i=0; i<numbs.length; i++){
+            numbs[i].value = i + 5;
+            numbs[i].innerHTML = '<span>' + numbs[i].value + '</span>';
+        }
+        document.getElementById('sum').textContent = numbs[0].value + numbs[1].value;
+
+
+        //three rectangle boxs
+        const colors = ['red', 'green', 'blue'];
+        let boxs = document.querySelectorAll('.boxs');
+        //function to color all 3 boxs together
+        // setTimeout(function funny(){
+        //     for(let i=0; i<boxs.length; i++){
+        //         boxs[i].style.backgroundColor = colors[i];
+        //     }
+        // }, 1000);
+
+        //lets try to color one by one
+        function colorUp(n){
+            increaseTime();
+            boxs[n].style.backgroundColor = colors[n];
+            boxs[n].style.height = '100px';
+            boxs[n].style.width = '100px';
+            if(boxs.length!=N){
+                setTimeout(colorUp, 2000, N++);
+            } else nowRun();
+        }
+        let N = 0;
+        //setTimeout(colorUp, 2000, N++); // !none worked
+        //setInterval(colorUp, 1000, N++); // !none worked
+        // for(let i=0; i<boxs.length; i++){
+        //     setTimeout(colorUp, 2000, N);
+        //     N++;
+        // } //still together
+        setTimeout(colorUp, 2000, N); //last step, works however, dont ask why (no interent)
+        let time = 1;
+        function increaseTime(){
+            document.getElementById('time').innerHTML = 'Time in seconds : ' + time;
+            time++;
+        }
+
+        //progress bar
+        let progress = document.querySelectorAll('.progress');
+        // let handler = document.getElementById('handler');
+        // handler.value = 50; //incomplete
+        // console.log(handler.value)
+
+        const myProgress = [99, 85, 80];
+        function nowRun(){
+            console.log('Now I am running...');
+            setTimeout(()=>{
+            for(i=0; i<progress.length; i++){ //using for(i in progress) casue a error !find it
+            progress[i].style.backgroundColor = colors[i];
+            progress[i].style.width = myProgress[i] + '%';
+            console.log(myProgress[i] + '%');
+            }
+        }, 2000)
+        }
+    </script>
+</body>
+</html>
