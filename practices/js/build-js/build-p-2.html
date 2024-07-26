@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build with JS | Page 2 | Dated 25 July 2024</title>
+    <style>
+        li{
+            margin: 10px auto;
+        }
+        span{
+            font-size: 1.5rem; display: inline-block; transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <p>String 'Nayem Ahmed'</p>
+    </ul>
+
+
+    <script>
+        var a, b, c;
+        a = 30, b = 6;
+        c = a / b;
+        console.log(c);
+
+        let w1 = 'A', w2 = 'B';
+        // console.log(w1>w2);
+        console.log(w1.charCodeAt(0));
+        console.log(w2.charCodeAt(0));
+
+        console.log('Finding Ascii value of of all char in a string');
+        let str = 'Nayem Ahmed';
+        const strArray = [];
+        for(let i=0; i<str.length; i++){
+            strArray[i] = str.charCodeAt(i);
+        }
+        console.log(strArray);
+
+        strArray.forEach((item, index)=>{
+            setTimeout(printList, 2000, item, index);
+        })
+        function printList(item, index){
+            const myList = document.querySelector('#myList');
+            const li = document.createElement('li');
+            li.innerHTML = `ASCII value of char[${index}] = ${String.fromCharCode(item)}, is <span> ${item}</span>`;
+            myList.appendChild(li);
+        }
+        //output :: ASCII value of char[0] = N, is 78
+
+
+        // strArray.forEach((item, index)=>{
+        //     console.log('Hey ' + index);
+        // })
+
+        //self invoked
+        // (function(){
+        //     const myList = document.querySelector('#myList');
+        //     const li = document.createElement('li');
+        //     li.innerHTML = 'Hey';
+        //     myList.appendChild(li);
+        // })();
+    </script>
+</body>
+</html>

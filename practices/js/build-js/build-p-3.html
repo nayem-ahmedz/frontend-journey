@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Page 3 | JS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #inputBox{
+            display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 15px;
+        }
+        input[type="text"]{
+            width: 90%; padding: 10px 20px;
+        }
+        input[type=button]{
+            width: fit-content; padding: 5px 20px;
+        }
+        .box{
+            padding: 25px 10px 10px; border: 1px solid #ccc; border-radius: 10px; max-width: 520px; margin: auto;
+        }
+        #resultBox{
+            display: none;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .m-0{
+            margin: 0;
+        }
+        #error-message{
+            color: red; visibility: hidden;
+        }
+        .animate{
+            animation-name: scaleUp; animation-duration: 0.5s; animation-timing-function: ease-in;
+        }
+        @keyframes scaleUp{
+            from{
+                color: white;
+            }
+            to{
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3 class="text-center">Find the ASCII value of a given string</h3>
+    <div id="inputBox" class="box">
+        <input type="text" id="input-string" name="input-string" placeholder="between 15 characters / 2 words" class="text-center">
+        <input type="button" id="submit-btn" value="find">
+        <p id="error-message" class="m-0">error.message</p>
+    </div>
+    <div id="resultBox" class="box">
+        <h4 class="text-center m-0">Output / Result</h4>
+        <p id="given-string"></p>
+        <ul id="resultList" class="basic-list"></ul>
+    </div>
+
+    <script>
+        let inputBox = document.getElementById('inputBox'),
+            resultBox = document.getElementById('resultBox'),
+            errorMessage = document.getElementById('error-message');
+        document.getElementById('submit-btn').addEventListener('click', showResult);
+        
+        //showing output
+        function showResult(){
+            let string = getInput();
+            if(string!==0 && string !==1){
+                document.getElementById('given-string').innerHTML = 'Input String : ' + string;
+                resultBox.style.display = 'block';
+                inputBox.style.display = 'none';
+                //creating list items
+                for(let i=0; i<string.length; i++){
+                    const rL = document.getElementById('resultList');
+                    const li = document.createElement('li');
+                    li.innerHTML = `The ASCII value of char[${i}], ${string[i]} is <span>${string[i].charCodeAt()}</span>`;
+                    rL.appendChild(li);
+                }
+            }
+        }
+
+        //get the input string, trim it, and return / error print
+        function getInput(){
+            let inputStr = document.getElementById('input-string').value.trim();
+            if(inputStr === ''){
+                errorMessage.style.visibility = 'visible';
+                errorMessage.innerHTML = 'Please Enter valid string';
+                errorMessage.classList.add('animate');
+                setTimeout(removeClass, 500);
+                return 0;
+            } else if(inputStr.length > 15) {
+                errorMessage.textContent = 'between 15 characters / 2 words';
+                return 1;
+            } else {
+                return inputStr;
+            }
+        }
+
+        function removeClass(){
+            errorMessage.classList.remove('animate');
+        }
+
+        // let cars = ['Toyota', 'Audi', 'BMW'];
+        // console.log(cars.join(', '));
+    </script>
+</body>
+</html>

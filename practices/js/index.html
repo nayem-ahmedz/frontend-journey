@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>List of all js practice</h1>
+    <header>
+        <h1 class="display-text">Frontend Journey</h1>
+        <nav id="nav">
+            <p id="showBar" onclick="showPanel()">☰</p>
+            <p id="hideBar" onclick="closePanel()">X</p>
+            <ul class="top-nav">
+                <li> <a href="/index.html">Home</a> </li>
+                <li> <a href="pages/about.html">About</a> </li>
+                <li> <a href="#">Portfolio</a> </li>
+                <li> <a href="/projects/index.html">Projects</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>List of all js practice</h1>
         <ul class="basic-list">
             <li> <a href="/practices/js/day-1.html">Day 1</a> </li>
             <li> <a href="/practices/js/day-2.html">Day 2</a> </li>
@@ -30,5 +45,16 @@
             <li> <a href="/practices/js/day-19.html">Day 19</a> </li>
             <li> <a href="/practices/js/day-20.html">Day 20</a> </li>
         </ul>
+        <h1>Others</h1>
+        <ul class="basic-list">
+            <li> <a href="practice/index.html">Other Practice</a> </li>
+            <li> <a href="build-js/index.html">Build JS</a> </li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p class="text-center">All Right Reserved | @Nayem Ahmed</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
