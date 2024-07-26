@@ -32,6 +32,9 @@
         #error-message{
             color: red; visibility: hidden;
         }
+        .basic-list li{
+            margin: 10px auto;
+        }
         .animate{
             animation-name: scaleUp; animation-duration: 0.5s; animation-timing-function: ease-in;
         }
@@ -54,7 +57,7 @@
     </div>
     <div id="resultBox" class="box">
         <h4 class="text-center m-0">Output / Result</h4>
-        <p id="given-string"></p>
+        <p id="given-string" class="text-center"></p>
         <ul id="resultList" class="basic-list"></ul>
     </div>
 
@@ -62,6 +65,7 @@
         let inputBox = document.getElementById('inputBox'),
             resultBox = document.getElementById('resultBox'),
             errorMessage = document.getElementById('error-message');
+
         document.getElementById('submit-btn').addEventListener('click', showResult);
         
         //showing output
@@ -85,21 +89,24 @@
         function getInput(){
             let inputStr = document.getElementById('input-string').value.trim();
             if(inputStr === ''){
-                errorMessage.style.visibility = 'visible';
-                errorMessage.innerHTML = 'Please Enter valid string';
-                errorMessage.classList.add('animate');
-                setTimeout(removeClass, 500);
+                printError('Please Enter valid string');
                 return 0;
             } else if(inputStr.length > 15) {
-                errorMessage.textContent = 'between 15 characters / 2 words';
+                printError('between 15 characters / 2 words');
                 return 1;
             } else {
                 return inputStr;
             }
         }
 
-        function removeClass(){
-            errorMessage.classList.remove('animate');
+        //print error message
+        function printError(message){
+            errorMessage.style.visibility = 'visible';
+            errorMessage.innerHTML = message;
+            errorMessage.classList.add('animate');
+            setTimeout(()=>{
+                errorMessage.classList.remove('animate');
+            }, 500);
         }
 
         // let cars = ['Toyota', 'Audi', 'BMW'];
