@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Storage | Practice</title>
+</head>
+<body>
+
+    <script>
+        //localStorage store data permanently
+
+        // Save Data to Local Storage
+        localStorage.setItem('name', 'Nayem');
+        // Read Data from Local Storage
+        console.log(localStorage.getItem('name'));
+
+
+        //sessionStorage object stores data for one session.
+        //sessionStorage.setItem('name', 'Ahmed');
+        console.log('From Session Storage', sessionStorage.getItem('name'));
+
+
+        //syntext ***Storage.setItem('key', 'value')
+        //         **Storage.getItem('key')
+
+
+        //length / data
+        console.log(localStorage.length); //1
+        console.log(sessionStorage.length); //2
+
+
+        //find value of nth name/key
+        console.log(sessionStorage.key(0)); //is this first time log from live server !!
+        //key(0) == name //key(name of nth data) that is stored
+
+
+
+        localStorage.setItem('age', 23);
+        console.log(localStorage.getItem('age'));
+
+        // Remove Data from Local Storage
+        localStorage.removeItem('age'); //key name
+        console.log(localStorage.getItem('age')); // null because it was removed
+
+
+        // Remove All (Clear Local Storage)
+        console.log('----')
+        localStorage.clear();
+        console.log(localStorage.getItem(name)); //null becasue of clear
+
+
+
+    </script>
+</body>
+</html>
