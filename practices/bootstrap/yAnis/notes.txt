@@ -300,6 +300,43 @@ use thead and tbody
 use table-primary to set background-color-primary
 
 
+BS T18 :: Form
+---------------
+label = form-label
+input = form-control //using this will take all space, width = 100%, else use form-control-inline
+
+--for form message = form-text (Ex. your email remain private)
+
+-- form - radio btn => 
+    div.form-check , (input).form-check-input
+
+    Code Example::
+        <label for="gender" class="form-label">Select Your Gender</label>
+        <div class="form-check">
+            <input type="radio" id="male" name="gender" class="form-check-input">
+            <label for="male">Male</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="female" name="gender" class="form-check-input">
+            <label for="female">Female</label>
+        </div>
+
+        //both radio button will in diffrent line, to make them stand in one line use form-check-inline in parent folder
+
+-- form - checkbox btn => same as for radio 
+
+-- form - select =>
+            select.form-select      w=100
+            select.form-select-inline       w=fit-content
+
+** use .form-floating to bring label inside of input field
+    <div class="mt-3 form-floating">
+        <label for="psw" class="form-label">Password</label>
+        <input type="password" id="psw" name="psw" class="form-control">
+    </div>
+
+
+
 
 BS T18 :: next?
 ---------------
