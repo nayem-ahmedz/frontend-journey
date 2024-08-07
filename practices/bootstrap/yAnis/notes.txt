@@ -338,7 +338,46 @@ input = form-control //using this will take all space, width = 100%, else use fo
 
 
 
-BS T18 :: next?
+BS T19 :: Carosel
+-----------------
+(copy form BS5 docs)
+carousel-item => use padding if you see your content fly outside
+copy and paste, insert your content into car-item
+If you want to autoplay slide use => data-bs-ride="carousel"
+# automatically stopeed changing slide on hover
+(When the ride option is set to true, rather than carousel, the carousel won’t automatically start to cycle on page load. Instead, it will only start after the first user interaction.)
+
+for individual interval time (change slide) use following line in that slide / car-item
+=> data-bs-interval="10000"
+
+
+BS 20 :: Badge, Tooltip, progress
+---------------------------------
+Badge Example
+    <h2>
+        Bootstrap5 Videos
+        <span class="badge text-bg-secondary rounded-pill">New</span>
+     </h2>
+    <button class="btn btn-danger btn-lg">
+        Download
+        <span class="badge text-bg-dark">20</span>
+    </button>
+
+Tooltip Example
+    <button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click to Submit">
+        Submit
+    </button>
+## You have to intialize tooptip using Js (find js code on doc)
+
+Progress Example
+div.progress > div.progress-bar
+code :
+    <div class="progress">
+        <div class="progress-bar w-50 bg-dark"></div>
+    </div>
+
+
+BS T21 :: next?
 ---------------
 
 
