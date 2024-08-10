@@ -420,8 +420,21 @@ Code Example : Sticky
     </header>
 
 
-BS T22 :: 
----------------
+BS T22 :: flex layout
+---------------------
+.d-flex
+    auto row-wise, for column-wise => flex-column
+-Reverse flex-row-reverse / flex-column-reverse
+
+-Responsive flex-sm-column flex-md-row
+(correction : flex-column flex-sm-row) == basically col-wise, from sm = row-wise
+
+-Alignment
+    justify-content start/center/end and around/evenly/between
+    align-items sam-as-top
+-To align a particular flex child
+    align-self-start and so-on...
+
 
 
 
