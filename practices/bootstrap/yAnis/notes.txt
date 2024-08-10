@@ -377,7 +377,55 @@ code :
     </div>
 
 
-BS T21 :: next?
+BS 21 :: float, clearfix, SVG
+-----------------------------
+Code Example
+    <div class="clearfix">
+        <div class="float-start w-50">
+            Left
+        </div>
+        <div class="float-end w-50">
+            Right
+        </div>
+    </div>
+
+* Responsive : float-sm-start
+
+To use SVG => Go to doc, find icon (expand if needed)
+copy and paste the svg code, update height+width if needed
+
+
+BS T22 :: display and position
+------------------------------
+Display
+display start with d - block/ inline/ inline-block and so on
+
+Position
+position start with position - static/ relative/ absolute/ fixed/ sticky
+
+Code Example : Relative and Absolute
+    <header class="p-3 text-bg-info position-relative" style="height: 200px;">
+        <h1 class="position-absolute d-inline-block bg-warning top-50 start-50">This is Header</h1>
+    </header>
+    * to make it center use translate-middle
+
+Code Example : Fixed
+    <header class="p-3 text-bg-info position-fixed top-0 start-0">
+        <h1>This is Header</h1>
+    </header>
+
+Code Example : Sticky
+    <header class="p-3 text-bg-info position-sticky top-0">
+        <h1>This is Header</h1>
+    </header>
+
+
+BS T22 :: 
+---------------
+
+
+
+BS T22 :: next?
 ---------------
 
 
