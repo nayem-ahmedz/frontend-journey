@@ -420,7 +420,7 @@ Code Example : Sticky
     </header>
 
 
-BS T22 :: flex layout
+BS T23 :: flex layout
 ---------------------
 .d-flex
     auto row-wise, for column-wise => flex-column
@@ -438,9 +438,13 @@ BS T22 :: flex layout
 
 
 
-BS T22 :: next?
+BS T24 :: modal
 ---------------
+copy and paste from doc
+    then use<<
 
+11 August 2024
+-----------------------------------End of Tutorials-----------------------------------
 
 
 
