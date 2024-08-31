@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Lists</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        .project-type{
+            margin-bottom: 0; font-size: 1.4rem;
+        }
+        .project-type::before{
+            content: "~ ";
+        }
+        .project-list{
+            list-style-type: none;
+        }
+        .basic-list-ordered{
+            list-style-type: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,26 +36,35 @@
     </header>
     <section id="homepage-section">
         <main>
-            <h1>List of Projects</h1>
-            <ul class="basic-list">
-                <li> <a href="area-of-circle/index.html">Area of Circle</a> </li>
-                <li> <a href="mini-calender/index.html">Mini Calender</a> </li>
+            <h1 class="text-center">List of all Projects</h1>
+            <h2>Web Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <p class="project-type">CSS</p>
+                    <ol class="basic-list basic-list-ordered">
+                        <li> <a href="/projects/web-projects/css/documentation-website/">documentation-website</a> </li>
+                        <li> <a href="/projects/web-projects/css/job-application/">job-application</a> </li>
+                        <li> <a href="/projects/web-projects/css/parralax-website/">parralax-website</a> </li>
+                        <li> <a href="/projects/web-projects/css/profile-card/">profile-card</a> </li>
+                        <li> <a href="/projects/web-projects/css/tribute-website/">tribute-website</a> </li>
+                    </ol>
+                </li>
+                <li>
+                    <p class="project-type">Javascript</p>
+                    <ol class="basic-list basic-list-ordered">
+                        <li> <a href="/projects/web-projects/js/auto-text-effect-animation/">auto-text-effect-animation</a> </li>
+                        <li> <a href="/projects/web-projects/js/life-time-spent/">life-time-spent</a> </li>
+                        <li> <a href="/projects/web-projects/js/life-timer-app/">life-timer-app</a> </li>
+                        <li> <a href="/projects/web-projects/js/mini-calender/">mini-calender</a> </li>
+                        <li> <a href="/projects/web-projects/js/random-image-generator/">random-image-generator</a> </li>
+                    </ol>
+                </li>
             </ul>
-            <h3>Other Projects</h3>
-            <dl class="basic-dl">
-                <dt>HTML</dt>
-                <dd>Project</dd>
-                <dt>CSS</dt>
-                <dd>Project</dd>
-                <dt>Bootstrap 5</dt>
-                <dd>
-                    <a href="/practices/bootstrap/projects/blog/index.html">Simple Blog</a>
-                </dd>
-            </dl>
         </main>
     </section>
     <footer>
         <p class="text-center">All Right Reserved | @Nayem Ahmed</p>
     </footer>
+    <script src="/script.js"></script>
 </body>
 </html>

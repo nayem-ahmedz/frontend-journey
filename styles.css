@@ -34,7 +34,7 @@ nav{
     background-color: blue; color: white;
 }
 .res-nav{
-    position: absolute; top: 0; right: 0; padding-right: 20px; width: 50%; min-height: 400px; background-color: rgba(0,0,0,0.6);
+    position: absolute; top: 0; right: 0; padding-right: 20px; width: 50%; min-height: 400px; background-color: rgba(0,0,0,0.6); z-index: 1;
 }
 .res-nav-list{
     margin-top: 10px;
