@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; min-height: 100vh;
+    background-image: url('assets/river-sunset.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;
+    display: flex; justify-content: center; align-items: center;
+}
+.container{
+    padding: 20px; width: 90%; max-width: 720px; min-height: 200px;
+    background: linear-gradient(to right, #eff, gray);
+    border-radius: 15px;
+    text-align: center;
+}
+input[type="number"], select{
+    width: 65px; height: 50px; padding: 5px; margin: 10px 0; text-align: center;
+    border: none; border-radius: 5px; box-shadow: 0 0 5px black;
+    font-size: 1rem;
+}
+#date{
+    width: 60px;
+}
+select{
+    width: 110px; margin: 10px 40px;
+}
+hr{
+    margin: 25px auto 20px; width: 75%; height: 2px; background: linear-gradient(gray, #eee); border: none;
+}
+input[type="button"]{
+    padding: 7px 20px; margin: 10px auto;
+    border: 0; border-radius: 10px; font-size: 1rem;
+}
+#submit-btn:hover{
+    background-color: blue; color: white;
+}
+.result{
+    display: inline-block; padding: 10px; margin: 10px; min-width: 80px;
+    box-shadow: 0 0 5px black;
+}
+
+/* Hide spinner for webkit-based browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none; /* Fallback to standard appearance property */
+    margin: 0;
+}
+
+/* Hide spinner for Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield; /* Fallback to standard appearance property */
+}
+
+
+@media screen and (max-width: 425px){
+    .container{
+        padding: 12px;
+    }
+    select{
+        margin: 10px 27px;
+    }
+}

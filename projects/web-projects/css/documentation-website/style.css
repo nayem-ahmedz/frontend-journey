@@ -1,0 +1,74 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* For smooth scroll ? dont work why? find internet frst :: Quota Movement 2024 */
+    scroll-behavior: smooth;
+}
+
+/* Header and Nav :: Fixed on left */
+header{
+    border: 1px solid #bbb; min-height: 100vh; position: fixed; top: 0;
+}
+header > h1{
+    padding: 20px 15px; font-weight: 500; border-bottom: 1px solid #ccc;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li a:link, nav ul li a:visited{
+    text-decoration: none; display: block; padding: 15px; color: black; font-weight: 500;
+    /* border-style: solid none solid none; border-width: 2px; border-color: red; */
+    border-bottom: 1px solid #ccc;
+}
+nav ul li a:hover{
+    background-color: #ccc; transition: 0.3s ease-in;
+}
+
+/* Main Section :: Started with 320px left-margin */
+main{
+    padding: 30px 40px; margin-left: 320px;
+}
+section{
+    margin-bottom: 30px;
+}
+section > h2{
+    padding: 15px 0; border-bottom: 1px solid #ccc; margin-bottom: 20px; color: rgba(0,0,0, 0.75);
+}
+section > h2::first-letter{
+    font-size: 2rem;
+}
+article{
+    display: flex; flex-direction: column; gap: 20px;
+}
+article > ul{
+    margin-left: 40px;
+}
+article > ul li{
+    margin: 8px auto;
+}
+
+/* coderun ul custom style */
+.coderun-ul{
+    list-style-type: none; margin-left: 30px;
+}
+.coderun-ul li::before{
+    content: "-) ";
+}
+
+/* first code */
+code{
+    white-space: pre-line; line-height: 2; padding: 0 30px 20px; background-color: #eee; color: blue;
+}
+
+
+/* Media Query :: header is sticky, scrollbar, removed main- left-margin and some padding */
+@media screen and (max-width: 700px){
+    header{
+        min-height: auto; position: sticky; background-color: whitesmoke; height: 175px; overflow: auto; box-shadow: 0 0 8px gray;
+    }
+    main{
+        margin-left: auto; padding-left: 20px;
+    }
+}

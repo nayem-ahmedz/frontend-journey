@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; background-color: rgba(0,0,255, 0.5); min-height: 100vh; font-family: monospace;
+    display: flex; justify-content: center; align-items: center;
+}
+.container{
+    width: 300px; margin: auto; border-radius: 10px; text-align: center; box-shadow: 0 0 5px rgba(0,0,0, 0.5); overflow: auto; background-color: #eef;
+}
+
+#month{
+    background-color: orange; font-size: 1.5rem; color: white; font-weight: bold;
+}
+#day{
+    font-size: 1.2rem; color: gray;
+}
+#date{
+    font-size: 3.8rem; font-weight: bold;
+}
+#year{
+    font-size: 1.2rem; font-family: Verdana, Geneva, Tahoma, sans-serif; color: gray;
+}
+.bStyle{
+    margin: 0; padding: 15px 0;
+}
+
+/* External Navigation */
+.navigation{
+    position: fixed; top: 5px; right: 10px;
+}
+.nav-list{
+    list-style-type: none;
+}
+.nav-list > li{
+    display: inline-block;
+}
+.nav-list > li > a{
+    display: block; text-decoration: none; padding: 8px 15px; border-radius: 10px; transition: 0.5s; opacity: 0.5;
+}
+.nav-list > li > a:hover{
+    background-color: blue; color: white; opacity: 1.0;
+}

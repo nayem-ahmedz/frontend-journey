@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-3 | JS</title>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <h1 id="heading-2"></h1>
+    <h1 id="heading-3"></h1>
+    <p>Cities name :</p>
+    <ul id="cities">
+        <li>Dhaka</li>
+        <li>Sylhet</li>
+        <li>Cumilla</li>
+        <li>Barishal</li>
+    </ul>
+
+    <script>
+        document.getElementById('heading').innerText = 'Welcome to Js';
+        document.getElementById('heading-2').innerHTML = 'Inner HTML';
+        document.querySelector('#heading-3').textContent = 'Text Content';
+        let sum = BigInt(0);
+
+        // const timeStart = new Date().getTime();
+        // for(let i=0; i<5000; i++){
+        //     sum = sum + BigInt(i);
+        // }
+        // const timeEnd = new Date().getTime();
+        // let value = (timeEnd - timeStart) / 1000;
+        // console.log(`It takes ${value} seconds and sum is : ${sum}`);
+        // console.log(new Date().getTime());
+
+        // let cityNames = document.querySelector('#cities');
+        // const cities = cityNames.getElementsByTagName('li');
+        // for(let j=0; j<cities.length; j++){
+        //     console.log(cities[j].innerHTML);
+        // }
+
+        let sum2 = 0;
+        const start = new Date().getTime();
+        for(let i=0; i<500000; i++){
+            sum2+=i;
+        }
+        const end = new Date().getTime();
+        console.log((end - start) / 1000);
+        let cityNames = document.getElementById('cities');
+        let cNames = cityNames.getElementsByTagName('li');
+        console.log(cNames);
+        for(let i=0; i<cNames.length; i++){
+            console.log(cNames[i].innerHTML);
+        }
+
+        //create a list and push some li items
+        let students = ['Nayem', 'Hajifa', 'Ahmed', 'Zara'];
+        let colleg = document.createElement('ul');
+        document.body.appendChild(colleg);
+        for(let s=0; s<students.length; s++){
+            let li = document.createElement('li');
+            li.innerHTML = students[s];
+            colleg.appendChild(li);
+        }
+
+        // let t = 0;
+        // updateTitle();
+
+        // function updateTitle(t){
+        //     document.title = `Title updated after ${t} seconds`;
+        //     t++;
+        //     setTimeout(updateTitle, 1000, t);
+        // }
+    </script>
+</body>
+</html>

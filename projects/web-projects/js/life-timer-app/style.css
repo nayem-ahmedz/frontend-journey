@@ -1,0 +1,81 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    height: 100vh; width: 100%; font-family: calibri;
+}
+.container{
+    height: 100vh;
+    background: url('assets/river-sunset.jpg') no-repeat;
+    background-size: cover; background-attachment: fixed;
+    display: grid; place-items: center;
+    position: relative;
+}
+.container::before{
+    content: ''; background: inherit;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0;
+    filter: blur(3px);
+}
+.content{
+    background-color: rgba(0,0,0, 0.5); padding: 20px; margin: 20px; border-radius: 10px; text-align: center; color: white; width: 90%; max-width: 720px;
+    position: relative; z-index: 1;
+}
+#initialText{
+    cursor: pointer; display: inline-block; transition: 0.5s;
+}
+#initialText:hover{
+    transform: scale(1.1);
+}
+.settings{
+    position: absolute; top: 15px; right: 20px; z-index: 1;
+    display: flex; align-items: center; gap: 1rem;
+    width: 32px; overflow: hidden; transition: 0.5s;
+}
+.setting:hover{
+    width: 322px;
+}
+.settings > i{
+    font-size: 2rem;
+}
+.settings >i:hover{
+    cursor: pointer; color: blue;
+}
+input{
+    padding: 10px 20px; font-size: 1rem;
+}
+input[type="date"]{
+    background-color: transparent; border: 1px solid transparent; outline: none;
+}
+#date:focus{
+    border: 1px solid blue;
+}
+input[type="button"]{
+    background: radial-gradient(#eee, #aaa); border: 1px solid gray; border-radius: 10px;
+}
+input[type="button"]:hover{
+    color: blue; border-color: blue;
+}
+
+
+/* Output */
+#resultBox > h1{
+    margin-bottom: 15px; color: #ccc;
+}
+.time{
+    display: inline-block; padding: 15px; font-size: 1.4rem; color: #bbb; line-height: 1.45;
+}
+#clear-btn{
+    display: block; margin: 15px auto auto; padding: 5px 20px; border-radius: 10px; opacity: 0.5; border: 1ps solid red;
+}
+#clear-btn:hover{
+    background-color: red; color: white;
+}
+.hide{
+    display: none !important;
+}
+.nums{
+    font-size: 2.4rem; text-shadow: 0 0 5px blue;
+}
+.invalid{
+    color: red; border-color: red !important;
+}

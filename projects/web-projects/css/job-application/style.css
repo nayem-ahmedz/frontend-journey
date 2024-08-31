@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee; padding: 7px; font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    max-width: 650px; margin: 50px auto; padding: 10px 15px; background-color: white; border-radius: 10px;
+}
+.top-heading{
+    text-align: center; font-size: 2.3rem;
+}
+
+/* Form Field : Boxs */
+.boxs{
+    width: 49.50%; display: inline-block; padding: 10px;
+}
+.boxs > label{
+    display: block; margin-bottom: 5px; font-weight: 500; margin-left: 3px;
+}
+.boxs > input, .boxs > select, .boxs > textarea{
+    display: block; width: 100%; padding: 15px; border-radius: 5px; border: 1px solid gray;
+}
+.add-div{
+    width: 99.50%;
+}
+.add-div > textarea{
+    height: 70px; resize: none; font-family: Arial, Helvetica, sans-serif;
+}
+#submit-btn{
+    display: block; margin: 25px auto 20px; padding: 8px 20px; border-radius: 10px; border: 1px solid green; font-size: 1rem; transition: all 0.3s;
+}
+#submit-btn:hover{
+    background-color: green; color: white;
+}
+
+@media screen and (max-width: 600px){
+    .boxs{
+        display: block; width: 80%; margin: auto;
+    }
+    .top-heading{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 425px){
+    .boxs{
+        width: 100%;
+    }
+}

@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: auto; min-height: 100vh; padding-bottom: 100px; background-color: whitesmoke; transition: 0.4s;
+}
+/* Header */
+header{
+    background-color: rgba(0,0,255, 0.8); color: white; padding: 10px 0;
+}
+.header-cont{
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+}
+.header-cont > h1{
+    text-shadow: 0 0 5px black;
+}
+.toggle-bar{
+    display: flex; align-items: center; gap: 15px;
+}
+.toggle-bar i{
+    font-size: 1.5rem; opacity: 0.5;
+}
+.header-cont input{
+    display: none;
+}
+label{
+    width: 80px; height: 40px; background-color: #aaa; display: inline-block; border-radius: 20px; position: relative; overflow: hidden;
+}
+.circle{
+    display: inline-block; width: 36px; height: 36px; background-color: white; border-radius: 50%; position: absolute; top: 2px; left: 2px; animation: toggleOff 0.4s linear forwards;
+}
+.header-cont input:checked + label{
+    background-color: black;
+}
+.header-cont input:checked + label .circle{
+    animation: toggleOn 0.4s linear forwards; /* forwards cause circle stay on destination */
+}
+
+.container{
+    padding: 30px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;
+}
+.container > img{
+    width: 300px; height: 300px; background-color: #eee; border-radius: 10px; box-shadow: 0 0 5px gray; transition: all 0.3s;
+}
+.container >img:hover{
+    transform: scale(1.05);
+}
+
+.wrapper{
+    max-width: 1200px; margin: auto; padding-left: 10px; padding-right: 10px;
+}
+
+footer{
+    text-align: center;
+}
+.btn{
+    display: inline-block; padding: 20px; border: 1px solid #aab; border-radius: 10px; font-size: 1rem; box-shadow: 1px 4px 5px rgba(0,0,0,0.5); position: relative; overflow: hidden; background-color: rgba(0,0,0,0.6); color: white;
+}
+.btn span{
+    position: relative; z-index: 1; /* use pos:rel to make sure z-index works */
+}
+.btn::before{
+    content: ""; width: 0; height: 0; background-color: blue; position: absolute; top: var(--yPos); left: var(--xPos); border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.4s ease, height 0.4s ease;
+}
+.btn:hover::before{
+    width: 300px; height: 300px;
+}
+
+/* Dark mode and light mode button animation */
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(40px);
+    }
+}
+@keyframes toggleOff {
+    0%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 767px){
+    .toggle-bar{
+        transform: scale(0.7);
+    }
+}

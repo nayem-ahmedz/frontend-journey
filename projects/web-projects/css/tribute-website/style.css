@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; min-height: 100vh; background-image:linear-gradient(-135deg, #eee, #ccf); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+main{
+    max-width: 1000px; margin: 40px auto; padding: 20px 15px; border-radius: 8px; box-shadow: 0 0 5px #cca;
+}
+
+/* Top Section */
+.top-section{
+    display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px;
+}
+.top-section > .image{
+    width: auto;
+}
+.top-section .image img{
+    width: auto; border-radius: 20px;
+} 
+.top-heading > h1{
+    font-size: 3rem; margin: 8px;
+}
+.top-heading > p{
+    text-align: right; font-size: 1.8rem; margin: 0 auto 5px; padding-right: 10px;
+}
+
+/* Article : Details */
+.details > h1{
+    font-size: 2rem; margin-bottom: 8px;
+}
+.details > p{
+    margin-top: 0;
+}
+
+/* Article : Quick facts */
+.quick-facts{
+    padding: 10px 100px;
+}
+.quick-facts > h2{
+    margin-bottom: 5px; text-align: center;
+}
+.quick-facts > p{
+    margin: 7px auto; padding-left: 5px; cursor: default; border-left: 5px solid #ccf; transition: all 0.3s;
+}
+.quick-facts > p:hover{
+    border-left: 5px solid blue;
+}
+article p{
+    font-size: 1.25rem; letter-spacing: 1px; line-height: 1.3;
+}
+
+.external-links{
+    font-size: 1.25rem; text-align: right;
+}
+
+@media screen and (max-width: 1439px){
+    article p{
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    main{
+        margin: auto; padding-top: 30px;
+    }
+    .top-heading > h1{
+        font-size: 2.5rem;
+    }
+    .top-heading > p{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 767px){
+    main{
+        padding: 30px 10px 20px;
+    }
+    .top-section{
+        justify-content: center;
+    }
+    .quick-facts{
+        padding: 10px 50px;
+    }
+}
+@media screen and (max-width: 425px){
+    .quick-facts{
+        padding: 10px 0 10px 25px;
+    }
+}

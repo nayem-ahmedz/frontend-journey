@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripted Title</title>
+</head>
+<body>
+    
+    <script>
+        document.title = 'Day-4 | JS';
+
+        //create a p element
+        let p1 = document.createElement('p');
+        p1.innerHTML = 'List of all Students';
+        document.body.appendChild(p1); //apend to body
+
+        //lets create a ul element and append it to body
+        const college = document.createElement('ul');
+        document.body.appendChild(college);
+        const studentNames = ['Nayem', 'Hajifa', 'Ahmed', 'Zara'];
+        //for in loop :: display li elements
+        for(let i in studentNames){
+            //console.log(studentNames[i]);
+            let li = document.createElement('li');
+            li.innerHTML = studentNames[i];
+            college.appendChild(li);
+        }
+    </script>
+</body>
+</html>

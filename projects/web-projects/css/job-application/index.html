@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Web Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1 class="top-heading">Job Application Portal</h1>
+        <form>
+            <div class="boxs">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="firstName">
+            </div>
+            <div class="boxs">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastName">
+            </div>
+            <div class="boxs">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="boxs">
+                <label for="jobRole">Job Role</label>
+                <select id="jobRole">
+                    <option value="frontendWeb">Front-end Developer</option>
+                    <option value="backendWeb">Back-end Developer</option>
+                    <option value="graphicsDesigner">Graphics Designer</option>
+                </select>
+            </div>
+            <div class="boxs add-div">
+                <label for="address">Address</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+            <div class="boxs">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="boxs">
+                <label for="postCode">Post Code</label>
+                <input type="text" id="postCode" name="postCode">
+            </div>
+            <div class="boxs">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" name="startDate">
+            </div>
+            <div class="boxs">
+                <label for="upFile">Upload Your CV (PDF)</label>
+                <input type="file" id="upFile" name="cv">
+            </div>
+            <input type="button" id="submit-btn" value="Submit">
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
