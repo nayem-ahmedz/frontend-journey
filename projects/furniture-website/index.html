@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Website | Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e54598ab59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper header-content">
+            <h1 id="web-name">FiU</h1>
+            <nav class="top-nav">
+                <button id="navbar-icon" onclick="shownav()"> <i class="fa-solid fa-bars"></i> </button>
+                <ul class="nav-ul">
+                    <li> <a href="#top-front">Home</a> </li>
+                    <li> <a href="#about">About</a> </li>
+                    <li> <a href="#our-design">Our Design</a> </li>
+                    <li> <a href="#contact">Contact</a> </li>
+                    <li> <a href="#our-shop">Shop</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="top-front">
+            <div class="wrapper tF-cont">
+                <h2>Best</h2>
+                <h2>Design for Furniture</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ad beatae laborum? Ex doloribus omnis quae, aut sapiente quis mollitia? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus necessitatibus sapiente fugiat molestias excepturi quibusdam iste deserunt dolorem itaque? Ipsum fuga molestiae in. Vero delectus, minus reprehenderit earum illum...
+                </p>
+                <button type="button" class="contact-btn">Contact us</button>
+            </div>
+        </section>
+        <section id="about" class="d-flex wrapper">
+            <article class="about-image">
+                <div class="about-image-cont">
+                    <img src="assets/img-2.png" alt="chair" class="about-image-img">
+                </div>
+            </article>
+            <article class="about-details">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit vero dignissimos eius repellar quas repellat quos!</p>
+                <button type="button">Read more</button>
+            </article>
+        </section>
+        <section id="our-design" class="text-center">
+            <h2>Our Work Furniture</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, facere!</p>
+            <article class="design-model d-flex">
+                <section class="card">
+                    <h3>Shahi Chair</h3>
+                    <img src="assets/img-3.png" alt="shahi chair" class="chair-image">
+                    <h4>Price : $300</h4>
+                    <button type="button" class="card-btn">Buy Now</button>
+                </section>
+                <section class="card">
+                    <h3>Shahi Sofa</h3>
+                    <img src="assets/saro.png" alt="shahi chair">
+                    <h4>Price : $400</h4>
+                    <button type="button" class="card-btn">Buy Now</button>
+                </section>
+                <section class="card">
+                    <h3>Shahi Brench</h3>
+                    <img src="assets/img-5.png" alt="shahi chair">
+                    <h4>Price : $200</h4>
+                    <button type="button" class="card-btn">Buy Now</button>
+                </section>
+            </article>
+        </section>
+        <section id="newsletter" class="d-flex text-center wrapper">
+            <div>
+                <img src="assets/img-6.png" alt="sofa-image" class="sofa-image">
+            </div>
+            <div class="news-right">
+                <h2>Subscribe Newsletter</h2>
+                <input type="text" id="news-email" name="news-email" class="text-center border-rounded" placeholder="your-email@mail.com">
+                <button type="button" class="contact-btn subs-btn">Subscribe now</button>
+            </div>
+        </section>
+        <section id="contact" class="d-flex wrapper text-center">
+            <div class="contact-form-box">
+                <h3>Contact Us</h3>
+                <form name="contact-form" class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="number" id="phone" name="phone" placeholder="Phone Number" required>
+                    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                    <input type="submit" value="send">
+                </form>
+            </div>
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57905.069456743724!2d91.82324767112729!3d24.895701574239048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375055447c89f0ef%3A0xabbbcd8a662762e2!2sMetropolitan%20University%2C%20Sylhet!5e0!3m2!1sen!2sbd!4v1708676575333!5m2!1sen!2sbd" id="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <!--Footer from preveious practice of this project, when I was learning CSS-->
+    <footer>
+        <div class="wrapper">
+            <div class="f-box clearfix">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li> <a href="#top-front">Home</a> </li>
+                    <li> <a href="#about">About</a> </li>
+                    <li> <a href="#our-design">Our Design</a> </li>
+                    <li> <a href="#contact">Contact</a> </li>
+                </ul>
+            </div>
+            <div class="f-box clearfix">
+                <h3>Repair</h3>
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    <li>Broken Chair</li>
+                    <li>Broken Woodside</li>
+                    <li>Removed nutshell</li>
+                    <li>Fault Product</li>
+                    <li>Damaged Product</li>
+                    <li>Others</li>
+                </ul>
+            </div>
+            <div class="f-box clearfix">
+                <h3>Social Media</h3>
+                <ul>
+                    <li> <a href="#">Facebook</a> </li>
+                    <li> <a href="#">Twitter</a> </li>
+                    <li> <a href="#">Google Plus</a> </li>
+                    <li> <a href="#">Linkedin</a> </li>
+                </ul>
+            </div>
+            <div class="f-box clearfix">
+                <h3>Our Repair Center</h3>
+                <p id="our-shop">
+                    Visit our branchs at Dhaka (head office), Sylhet, Chittagong, Khulna and nearly 51 outlets in diffrent upozilla. <br>
+                    Call <span id="phoneNo">+917-245-4676</span> for more details
+                </p>
+                <p>
+                    All Right Reserved @FiU
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
