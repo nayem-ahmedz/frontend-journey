@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Asynchronous</title>
+    <style>
+        p{font-size: 1.5rem;}
+    </style>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="time-field"></p>
+
+    <script>
+      setTimeout(display, 2000);
+      function display(){
+        document.getElementById('result').innerHTML = 'I Love You!';
+      }
+
+    //   setTimeout(function(){ display2('Do you love me?') }, 2000)
+    //   function display2(value){
+    //     document.getElementById('result2').innerHTML = value;
+    //   }
+      setTimeout(() => display2('Do you love me?'), 2000)
+      function display2(value){
+        document.getElementById('result2').innerHTML = value;
+      }
+
+      //setInterval
+      setInterval(newTime, 1000);
+      const timeField = document.getElementById('time-field');
+      function newTime() {
+        const time = new Date();
+        timeField.innerHTML = `
+          Hour : ${(time.getHours()>12 ? time.getHours()-12 : time.getHours())}, Minute: ${time.getMinutes()}, Seconds : ${time.getSeconds()}
+        `;
+      }
+    </script>
+</body>
+</html>

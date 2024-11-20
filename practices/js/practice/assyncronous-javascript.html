@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assyncronous Javascript from Learn With Summit</title>
+</head>
+<body>
+    <h2>Assyncronous Javascript from Learn With Summit : Youtube Video</h2>
+    <h3>Javascript is single tread programming language</h3>
+    <h3>Topic : Callback</h3>
+
+    <script>
+        //single tread, non assycronous approach, in the while loop program will hold for 5 seconds and cannot go forward, will not execute next line
+
+        // function processOrder(){
+        //     console.log('processing order 1 from waiter');
+        //     const d = new Date().getTime();
+        //     while(d + 5000 >= new Date().getTime());
+        //     console.log('Order is ready');
+        // }
+        // console.log('Takes order from customer 1');
+        // processOrder();
+        // console.log('Order is delivered');
+
+
+        //assycronous approach + no blocking behaviour
+
+        // function processOrder(){
+        //     console.log('processing order 1 from waiter');
+        //     setTimeout(() => {
+        //         console.log('cooking is done') //will run 5s later, while program continues
+        //     }, 5000)
+        //     console.log('Order is ready');
+        // }
+        // console.log('Takes order from customer 1');
+        // processOrder();
+        // console.log('Order is delivered');
+
+        // flow control issue
+        //lets solve it
+
+        function takeOrder(a, callBack){
+            console.log('order is placed for ' + a);
+            callBack(a);
+        }
+        const processOrder = (a, callBack) => {
+            console.log('processing order for ' + a);
+            setTimeout(() => {
+                console.log('cooking is done');
+                console.log(`Order is ready for ${a}`);
+                callBack(a);
+            }, 4000);
+        }
+        function completeOrder(a){
+            console.log('Order is delivered to ' + a);
+        }
+
+        takeOrder('Customer 1', (a) => {
+            processOrder(a, (a) => {
+                completeOrder(a);
+            });
+        }); // this way we control workflows
+        console.log('program continues...');
+        // if it is a large application, then, lots of call back = callback hell :: messy, so lets find a diffrent approach
+
+        
+        //solution = js promise
+        // see assync-promise.html
+    </script>
+</body>
+</html>

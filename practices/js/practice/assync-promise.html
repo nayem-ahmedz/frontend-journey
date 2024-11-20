@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assyncronous Javascript from Learn With Summit</title>
+</head>
+<body>
+    <h2>Assyncronous Javascript from Learn With Summit : Youtube Video</h2>
+    <h3>Topic : Promise</h3>
+    <p>
+        If promise is succesfull : promise is resolved <br>
+        else, promise is rejected
+    </p>
+
+    <script>
+        //promise syntex
+        // const promise = new Promise((resolve, reject) => {
+        //     //do stuff
+        // });
+        // promise
+        //     .then()
+        //     .catch()
+
+        //promise will not stop the program, basically execution at promise will be skipped, and when promise is resolved, output/result will be showed/performed
+        
+        // const hasMeeting = true;
+        // const meeting = new Promise((resolve, reject) => {
+        //     if(!hasMeeting){
+        //         const newDetails = {
+        //             name: 'My Meeting 1',
+        //             location: 'Sylhet',
+        //             time: '10:15 PM'
+        //         };
+        //         resolve(newDetails);
+        //     } else{
+        //         reject(new Error('Meeting is already scheduled'));
+        //     }
+        // });
+
+        // meeting
+        //     .then((res) => {
+        //         //resolved data
+        //         console.log(JSON.stringify(res));
+        //     })
+        //     .catch((err) => {
+        //         //rejected data
+        //         console.log(err.message);
+        //     })
+
+
+
+        // day 2
+        //assycrnous : a promise getting data from another promise
+        const hasMeeting = false;
+        const meeting = new Promise((resolve, reject) => {
+            if(!hasMeeting){
+                const newMeeting = {
+                    name: 'My Meeting 1',
+                    location: 'Sylhet',
+                    time: '10:15 PM'
+                };
+                resolve(newMeeting);
+            } else{
+                reject(new Error('Meeting is already scheduled'));
+            }
+        });
+        // const addToCalender = (value) => {
+        //     return new Promise((resolve, reject) => {
+        //         const calender = `${value.name} is arranged in ${value.location} at ${value.time}`;
+        //         resolve(calender);
+        //     });
+        // }
+        // avobe we have only resolve, no reject and thus we can simplyfy it
+        const addToCalender = (value) => {
+            const calender = `${value.name} is arranged in ${value.location} at ${value.time}`;
+            return Promise.resolve(calender);
+        }
+
+
+        meeting
+            .then(addToCalender) //pass the resolve value from meeting to addToCalender
+            .then((res) => {
+                //resolved data
+                console.log(res); //log the resolved value from addToCalender
+            })
+            .catch((err) => {
+                //rejected data
+                console.log(err.message); //log any error in this chain
+            })
+
+
+
+        //let's run multiple promise concurrently and get one output, one .then()
+        const promise1 = Promise.resolve('Promise 1 is resolved');
+        const promise2 = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve('Promise 2 is resolved');
+            }, 2000);
+        });
+
+        // promise1.then((res) => console.log(res));
+        // promise2.then((res) => console.log(res));
+
+        //lets print them togerther => multiple promise, one output, together in time
+        // Promise.all([promise1, promise2]).then((res) => { //it will return array
+        //     console.log(res);
+        // });
+
+        //Promise.race() = promise that will resolve first, kind of race
+        Promise.race([promise1, promise2]).then((res) => { //it will return array
+            console.log(res);
+        });
+        
+    </script>
+</body>
+</html>

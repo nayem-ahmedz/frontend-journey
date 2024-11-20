@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Callbacks</title>
+    <style>
+        p{font-size: 1.5rem;}
+    </style>
+</head>
+<body>
+    <h1>Js Callbacks</h1>
+    <p>A callback is a function passed as an argument to another function.</p>
+    <p id="result"></p>
+    <p id="array"></p>
+
+    <script>
+        function display(s){
+            document.getElementById('result').innerHTML = s;
+        }
+        function calc(a, b, callBack){
+            let sum = a + b;
+            callBack(sum);
+        }
+        calc(5, 201, display);
+
+        function textRed(){
+            document.getElementById('result').style.color = 'Red';
+        }
+        calc(4, 2, textRed);
+
+        //process a array using callback function
+        const ar = [2, 9, -3, 1, -5, -5, 0, 5];
+
+        function removeNeg(ar, callback2){
+            const arr = [];
+            for(const x of ar){
+                if(callback2(x)){
+                    arr.push(x);
+                }
+            }
+            return arr;
+        }
+        const posNumbers = removeNeg(ar, (x) => x >= 0);
+        document.getElementById('array').innerHTML = posNumbers;
+    </script>
+</body>
+</html>
