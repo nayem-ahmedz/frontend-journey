@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    max-width: 1400px; margin: auto;
+}
+.text-center{
+    text-align: center;
+}
+article{
+    padding: 60px 30px;
+}
+.section-divider{
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Header */
+header{
+    padding: 0 5px; position: fixed; top: 0; width: 100%; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+.header-cont{
+    display: flex; justify-content: space-around; align-items: center;
+}
+.header-left > h2{
+    display: inline-block; font-size: 2rem; margin-left: 10px; color: blue;
+}
+.top-logo{
+    width: 40px; height: auto; position: relative; top: 10px;
+}
+
+/* Nav */
+.top-nav{
+    list-style-type: none;
+}
+.top-nav li{
+    display: inline-block;
+}
+.top-nav li a:link, .top-nav li a:visited{
+    display: inline-block; padding: 10px; text-decoration: none; font-size: 1.15rem; border-radius: 5px;
+}
+.top-nav li a:hover{
+    background-color: rgba(0,0,0,0.4); color: white;
+}
+.buy-now-btn{
+    position: absolute; top: 25px; right: 20px; z-index: 1; padding: 10px 20px; cursor: pointer;
+}
+
+/* Featured Top */
+main{
+    margin-top: 90px;
+}
+.featured-top{
+    min-height: 600px; text-align: center; background-image: url('assets/pic11.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; padding-top: 150px; color: white;
+}
+.featured-top > p{
+    background-color: rgba(0,0,0,0.2); padding: 5px; font-size: 1.7rem;
+}
+.featured-top > h1{
+    font-size: 3rem;
+}
+.d-btn{
+    padding: 10px 20px; font-size: 1rem; border-radius: 5px; border: 1px solid gray; margin-right: 15px; color: red; background-color: rgba(255,255,255, 0.85); cursor: pointer;
+}
+.d-btn > i{
+    margin-right: 5px;
+}
+
+/* Tutorial Section */
+.box{
+    display: flex; justify-content: center; flex-wrap: wrap;
+}
+.box-item-2 > div{
+    flex-basis: 50%;
+}
+.tutorial-video{
+    text-align: right; padding-right: 50px;
+}
+#vid-frame{
+    width: 560px; height: 315px;
+}
+.tutorial-text{
+    max-width: 350px;
+}
+.tutorial-text > h2{
+    margin-top: 40px;
+}
+.tutorial-text > p{
+    line-height: 1.3;
+}
+
+/* About Application Section */
+.about-app{
+    text-align: center;
+}
+.box-item-4{
+    gap: 1.5rem; padding-top: 20px;
+}
+.box-item-4 > div{
+    flex-basis: 300px; padding: 20px; border: 1px solid gray; border-radius: 10px;
+}
+.items-4 > i{
+    font-size: 1.5rem; color: blue;
+}
+
+/* App costing section */
+.box-item-3{
+    gap: 1.7rem;
+}
+.box-item-3 > div{
+    border: 4px solid #cec; flex-basis: 320px; padding: 20px 8px 30px; border-radius: 7px;
+}
+.product-price{
+    font-size: 1.4rem;
+}
+.product-price-value{
+    display: block; font-size: 1.7rem; margin-top: 2rem; margin-bottom: 0.5rem; font-weight: 600;
+}
+.items-3 > ul{
+    list-style-type: none; margin: 0; padding: 0;
+}
+.items-3 > button{
+    padding: 10px 20px; border: 1px solid black; border-radius: 8px; background-color: rgba(255, 123, 0, 0.995); font-size: 1rem; margin-top: 2.8rem; box-shadow: 5px 5px 5px black; color: white; font-weight: 600;
+}
+
+/* Our Team */
+.team-members > div{
+    flex-basis: 250px; border: 3px solid rgba(0,0,0,0.15);
+}
+.team-members h4, .team-members p{
+    margin: 7px auto;
+}
+
+/* Subsribe News Letter */
+#news-email, .subs-btn{
+    border: 1px solid gray; padding: 8px; border-radius: 5px; font-size: 0.9rem;
+}
+#news-email{
+    margin-right: 20px; width: 320px;
+}
+.subs-btn{
+    background-color: red; color: white;
+}
+
+/* New FEatures */
+.n-f-boxs{
+    gap: 2rem;
+}
+.items-2{
+    background-color: lightgray; flex-basis: 500px !important; padding: 20px; border-radius: 10px;
+}
+.new-features img{
+    width: 260px; height: auto; float: left; margin-right: 10px;
+}
+
+/* Contact section */
+.contact-box{
+    gap: 3rem;
+}
+.items-2-contact{
+    flex-basis: 420px !important; background: none;
+}
+#map{
+    width: 100%; height: 100%; min-height: 400px; box-shadow: 0 0 5px gray;
+}
+.contact-form > input, .contact-form > textarea{
+    display: block; margin: 15px auto; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 10px; font-size: 1rem; box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+#message{
+    height: 7rem; resize: none;
+}
+input[type="submit"]{
+    width: auto; padding: 10px 20px; background-color: green; color: white; cursor: pointer;
+}
+
+/* Footer */
+footer{
+    background-color: gray; padding: 10px 0;
+}
+
+@media screen and (min-width: 1300px) {
+    .header-cont{
+        justify-content: space-between;
+    }
+}
