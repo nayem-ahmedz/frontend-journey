@@ -13,7 +13,113 @@
     </p>
 
     <script>
+        //practice from previous day
+        // const value = 1;
+        // const promise1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         (value > 0) ? resolve('Promise 1 is resolved') : reject('error');
+        //     }, 2000);
+        // });
+        // // promise1
+        // //     .then((res) => {
+        // //         console.log(res);
+        // //     })
+        // //     .catch((err) => {
+        // //         console.log(err)
+        // // });
+
+        // const promise2 = Promise.resolve('Promise 2 is resolved');
+        // Promise.all([promise1, promise2])
+        //     .then((res) => {
+        //         console.log(res); //output = array of promises
+        //     })
+        //     .catch((res) => {
+        //         console.log(res) //output = error
+        //     });
+        // Promise.race([promise1, promise2]).then((res) => {
+        //     console.log(res);
+        // });
+
+
+        //assync
+        // function greet(){
+        //     return 'Welcome Mr Nayem';
+        // }
+        // console.log(greet());
+
+        // async function greet(){ //async will return a Promise
+        //     return `Welcome, I am assyncronous function`;
+        //     // return Promise.resolve('I am a promise');
+        // }
+        // //console.log(greet());
+
+        // //await = will wait for a asyncronous task to be completed
+        // const hasMeeting = false;
+        // const meeting = new Promise((resolve, reject) => {
+        //     if(!hasMeeting){
+        //         const newMeeting = {
+        //             name: 'Teachers Discussion',
+        //             time: '10:20 PM',
+        //             location: 'Sylhet'
+        //         };
+        //         resolve(newMeeting);
+        //     } else{
+        //         reject(new Error('Meeting is already Scheduled'));
+        //     }
+        // });
+        // const addToCalender = (newMeeting) => {
+        //     const calender = `Added a new meeting named : ${newMeeting.name}, at ${newMeeting.time} in place : ${newMeeting.location}`;
+        //     return Promise.resolve(calender);
+        // }
         
+        // // meeting
+        // //     .then(addToCalender)
+        // //     .then((res) => console.log(res))
+        // //     .catch((err) => console.log(err.message));
+
+        // // async function myMeeting(){
+        // //     const newMeeting = await meeting;
+        // //     const calender = await addToCalender(newMeeting);
+        // //     console.log(calender);
+        // // }
+
+        // //what happen in case of error? we need to catch it
+        // async function myMeeting(){
+        //     try{
+        //         const newMeeting = await meeting;
+        //         const calender = await addToCalender(newMeeting);
+        //         console.log(calender);
+        //     } catch{
+        //         console.log('meeting is already Scheudled'); // catch if any promise is rejected
+        //     }
+        // }
+
+        // myMeeting();
+        // console.log('Hey');
+        
+
+        //practice of Async on 22 NOv 2024
+        const hasMeeting = false;
+        const promise = new Promise((resolve, reject) => {
+            if(!hasMeeting){
+                const newMeeting = {
+                    name: 'Teachers Day', time: '10:20 AM', location: 'Sylhet'
+                };
+                resolve(newMeeting);
+            } else {
+                reject(new Error('Meeting is already Scheduled'));
+            }
+        });
+        const addToCalender = (m) => {
+            const o = `Meeting ${m.name} is scheuduled in ${m.location}, at time ${m.time}`;
+            return Promise.resolve(o);
+        }
+        async function myMeeting(){
+            const meeting = await promise;
+            const calender = await addToCalender(meeting);
+            console.log(calender);
+        }
+        myMeeting();
     </script>
 </body>
 </html>
