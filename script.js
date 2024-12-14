@@ -3,7 +3,7 @@ let nav = document.getElementById('nav');
 let navList = document.querySelector('.top-nav');
 let sB = document.getElementById('showBar');
 let hB = document.getElementById('hideBar');
-let homePS = document.getElementById('homepage-section');
+let homePS = document.querySelector('section');
 function showPanel(){
     sB.style.display = 'none';
     hB.style.display = 'block';

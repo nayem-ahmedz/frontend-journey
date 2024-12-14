@@ -64,6 +64,9 @@ footer{
 }
 
 /* universal style / classes */
+.wrapper{
+    max-width: 1400px; margin: auto;
+}
 .basic-list{
     list-style-type: circle;
 }
@@ -120,8 +123,8 @@ footer{
         display: block !important;
     }
 }
-@media screen and (min-width: 1441px){
+/* @media screen and (min-width: 1441px){
     header, section, footer{
         padding-left: 200px; padding-right: 200px;
     }
-}
+} */
