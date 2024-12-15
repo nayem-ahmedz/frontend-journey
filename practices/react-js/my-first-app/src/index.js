@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -6,8 +6,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App(){
+  const [input, setInput] = useState('');
+  const Fruits = ['Apple', 'Mango', 'Banana'];
+  const [fruits, setFruits] = useState(Fruits);
+  function handleSubmit(){
+    if(input.trim()){
+      // setFruits((prev) => ([...prev, input]))
+      setFruits((prev) => {
+        return [...prev, input]
+      });
+      setInput('');
+    } else{
+      alert('Empty field');
+    }
+  }
   return(
-    <h1>Hey</h1>
+    <>
+      <h1>App</h1>
+      <ul>
+        {
+          fruits.map((fruit, index)=> <li key={index}>{fruit} at index {index}</li>)
+        }
+      </ul>
+      <input type='text' value={input || ''} onChange={(e) => setInput(e.target.value)} />
+      <input type='submit' onClick={handleSubmit} value='submit' />
+    </>
   );
 }
 
