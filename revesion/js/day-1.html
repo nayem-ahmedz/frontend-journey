@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 1 | Practice (Revesion) | JavaScript</title>
     <link rel="stylesheet" href="/styles.css">
-    <!-- Date : 15 Dec 2024, JavaScript from w3school.com -->
+    <!-- Date : 15 Dec 2024, JavaScript from w3school.com, from 11:30 -->
 </head>
 <body>
     <section>
         <div class="wrapper">
-            <h1 class="text-center">JavaScript :: 14 Dec 2024, from w3school.com</h1>
+            <h1 class="text-center">JavaScript :: 15 Dec 2024, from w3school.com</h1>
     
             <p id="demo"></p>
+            <button onclick="window.print()">Print this page</button>
+            <p id="field"></p>
         </div>
     </section>
     <script>
-        setTimeout(()=>{
-            document.getElementById('demo').innerHTML = 'Hey This is Nayem';
-        }, 2000);
+        document.getElementById('demo').innerHTML = 'Hey This is Nayem';
+        //document.write('Document write');
+        //window.alert(5+6);
+        //alert('Window is global scope object, so you can ommit window keyword');
+        //console.log(5+7);
+
+        let field = document.getElementById('field');
+        let value = 5;
+        //field.innerHTML = value.toFixed(100); //values between 1 to 100
+        // name = "Nayem Ahmed";
+        // console.log(name);
+        // console.log(typeof(name))
+        let name = 'Nayem Ahmed',
+            age = 24,
+            status = 'active';
+        console.log(name, age, status);
+
+        let $ = 'Dollar';
+        console.log($);
+
+        let _private = 'I am private variable';
+        console.log(_private);
     </script>
 </body>
 </html>
