@@ -16,7 +16,33 @@
         </div>
     </section>
     <script>
+        class Car{
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+            }
+            getDesc(){
+                return `Name is ${this.name}, price is ${this.price}$`;
+            }
+        }
+        let c1 = new Car('Audi', 1200);
+        console.log(c1.getDesc());
         
+        c1 = new Car('Toyota', 1000);
+        console.log(c1.getDesc());
+
+        class Garage extends Car{
+            constructor(name, price, garage){
+                super(name, price);
+                this.garage = garage;
+            }
+            getGarage(sw){
+                return this.getDesc() + ' is on Garage : ' + this.garage + ' checked on ' + sw;
+            }
+        }
+        const g1 = new Garage('BMW', 2000, 'MyGaragae');
+        console.log(g1.getDesc());
+        console.log(g1.getGarage('16 Dec'));
     </script>
 </body>
 </html>
