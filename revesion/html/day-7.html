@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 | Practice (Revesion) | HTML</title>
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date : 16 + 17 Jan 2025, HTML from w3school.com; at 9:40 && 9:35 PM, from HTML Image -->
+     <style>
+        .imgDiv{
+            height: 800px; width: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixe;
+            background-size: cover;
+            background-position: center;
+        }
+        table, th, td {
+            border:1px solid black; border-radius: 10px;
+        }
+        th, td{
+            padding: 5px 10px;
+        }
+        .table1 tr:nth-child(even){
+            background-color: gray;
+        }
+     </style>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">HTML :: 16 + 17 Jan 2025, from w3school.com</h1>
+            
+            <!-- <div class="imgDiv">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis temporibus, reprehenderit numquam blanditiis nemo molestiae corporis quod, minima in doloremque placeat natus culpa deserunt eos distinctio provident dolorum ipsum dolor!</p>
+            </div> -->
+
+            <table style="width: 50%;" class="table1">
+                <tr style="height: 3rem;">
+                    <th style="width: 50%;">Name</th> <th>Age</th> <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Nayem</td> <td>24</td> <td>Active</td>
+                </tr>
+                <tr>
+                    <td>Hajifa</td> <td>23</td> <td>Active</td>
+                </tr>
+                <tr>
+                    <td>Ahmed</td> <td>20</td> <td>Inactive</td>
+                </tr>
+            </table>
+            <hr>
+            <table style="width: 40%">
+                <caption>Colspan example</caption>
+                <tr>
+                    <th colspan="2">Name</th> <th>Age</th>
+                </tr>
+                <tr>
+                    <td>Nayem</td> <td>Ahmed</td> <td>Active</td>
+                </tr>
+                <tr>
+                    <td>Hajifa</td> <td>Jui</td> <td>Active</td>
+                </tr>
+                <tr>
+                    <td>Ahmed</td> <td>Miah</td> <td>Inactive</td>
+                </tr>
+            </table>
+
+            <hr>
+            <table style="width: 30%;">
+                <caption>Rowspan examaple</caption>
+                <tr>
+                    <th>Name</th> <td>Nayem Ahmed</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Phone</th> <td>01746012564</td>
+                </tr>
+                <tr>
+                    <td>01623548590</td>
+                </tr>
+            </table>
+            
+            <!-- Till HTML Table, done -->
+        </div>
+    </section>
+</body>
+</html>

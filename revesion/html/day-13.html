@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 | Practice (Revesion) | HTML</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date : 27 + 28 Jan 2025, HTML from w3school.com; at 9:15, 8:45 PM, from HTML -- -->
+     <style>
+        video{
+            transition: 1s;
+        }
+     </style>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">HTML :: 27 + 28 Jan 2025, from w3school.com</h1>
+            
+            
+            <div class="text-center">
+                <video id="video1" width="240">
+                    <source src="/media/funny-video.mp4" type="video/mp4">
+                    Your browser does not support video!
+                </video>
+                <p>
+                    Controls :
+                    <button onclick="playPause()">Play/Pause</button>
+                    <button onclick="big()">Big</button>
+                    <button onclick="small()">Small</button>
+                    <button onclick="normal()">Normal</button>
+                </p>
+            </div>
+
+            <script>
+                let video = document.getElementById('video1');
+                let playPause = () => {
+                    if(video.paused){
+                        video.play();
+                    } else{
+                        video.pause();
+                    }
+                }
+                function big(){
+                    video.width = 720;
+                }
+                function normal(){
+                    video.width = 240;
+                }
+            </script>
+            
+            <!-- Till HTML SVG --, 1h 30m -->
+        </div>
+    </section>
+</body>
+</html>

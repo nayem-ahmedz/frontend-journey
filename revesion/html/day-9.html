@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 | Practice (Revesion) | HTML</title>
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date : 20 + 21 Jan 2025, HTML from w3school.com; at 4:50 PM, from HTML -- -->
+     <style>
+        
+     </style>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">HTML :: 20 + 21 Jan 2025, from w3school.com</h1>
+            
+            
+            <p>Click on hide button</p>
+            <button onclick="hide()">Hide elements</button>
+            <p class="hideable">Hide me 1</p>
+            <p class="not-hideable">! Hide me</p>
+            <p class="hideable">Hide me 1</p>
+            <p class="hideable">Hide me 1</p>
+
+            <h3 class="text-center">HTML iFrame <a href="https://nayem-ahmedz.netlify.app" target="myFrame" title="open in iframe">Nayems Website</a> </h3>
+
+            <iframe src="#" name="myFrame" title="Nayems Portfolio Website" style="width: 360px; height: 240px;"></iframe>
+
+            <br><br>
+            <button onclick="document.getElementById('datetime').innerHTML = Date()">Print Date</button>
+            <p id="datetime"></p>
+
+
+            <script>
+                function hide(){
+                    let el = document.getElementsByClassName('hideable');
+                    for(let i=0; i<el.length; i++){
+                        el[i].style.display = 'none';
+                    }
+                    console.log('elements are hidden');
+                }
+                
+                //c code
+                /*
+                #include <stdio.h>
+ 
+                int main() {
+                
+                    float distance, speed;
+                    scanf("%f %f", &distance, &speed);
+                    float total = distance * speed;
+                    printf("%.3f\n", total/12);
+                    
+                    return 0;
+                }
+                */
+               function createEl(){
+                let el = document.createElement('li');
+                el.innerHTML = 'hey';
+                document.getElementById('datetime').appendChild
+               }
+            </script>
+            
+            <!-- Till HTML layout, 1H + 45 mins -->
+        </div>
+    </section>
+</body>
+</html>

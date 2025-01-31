@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 | Practice (Revesion) | HTML</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date : 29 + 30/31 Jan 2025, HTML from w3school.com; at 6:30 PM, from HTML -- -->
+     <style>
+        img{
+            width: 200px; height: auto; border-radius: 50%; display: none;
+        }
+        #myDiv{
+            width: 400px; height: 400px; border: 1px solid red; margin: 50px auto; padding: 20px;
+        }
+     </style>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">HTML :: 29 Jan 2025, from w3school.com</h1>
+            
+            
+            <img src="https://nayem-ahmedz.netlify.app/static/media/nayem-ahmed.0e87c7f07bb2015c9a3c.webp" alt="nayem ahmed" id="myImg" draggable="true" ondragstart="drag(event)" />
+
+            <div id="myDiv" ondragover="allowDrag(event)" ondrop="dropOut(event)"></div>
+
+            <p id="demo"></p>
+
+            <p id="click-count">0</p>
+            <button type="button" onclick="clickCount()">Click</button>
+
+            <script>
+                function allowDrag(ev){
+                    ev.preventDefault();
+                }
+                function drag(ev){
+                    ev.dataTransfer.setData('text', ev.target.id);
+                }
+                function dropOut(ev){
+                    ev.preventDefault();
+                    let data = ev.dataTransfer.getData('text');
+                    ev.target.appendChild(document.getElementById(data));
+                } //works on online editor :: w3school tryit, but not in local, later worked
+
+
+                function printD(value){
+                    document.getElementById('demo').innerHTML = value;
+                }
+
+                //check weather Web Storage is avaiable or not
+                if(typeof Storage !== 'undefined'){
+                    printD('Storage is avaiable');
+                } else{
+                    printD('Storage is not avaiable');
+                }
+
+                localStorage.setItem('name', 'Nayem');
+                printD(localStorage.getItem('name'));
+
+                localStorage.lastname = 'Ahmed';
+                printD(localStorage.lastname);
+
+                localStorage.removeItem('lastname');
+                printD(localStorage.getItem('lastname')); //nothing
+                printD(localStorage.lastname); //undefined
+
+                printD('clear');
+
+                // function clickCount(){
+                //     if(typeof(Storage) !== 'undefined'){
+                //         if(localStorage.getItem('clickCounts')){
+                //             localStorage.clickCounts = Number(localStorage.clickCounts) + 1;
+                //         } else{
+                //             localStorage.setItem('clickCounts', 1);
+                //         }
+                //         document.getElementById('click-count').innerHTML = localStorage.getItem('clickCounts');
+                //     } else{
+                //         document.getElementById('click-count').innerHTML = 'Storage is not available';
+                //     }
+                // }
+                function clickCount(){
+                    if(typeof(Storage) !== 'undefined'){
+                        let count = localStorage.getItem('clickCounts');
+                        if(count === null){
+                            count = 0;
+                        } else{
+                            count = Number(count);
+                        }
+                        count += 1;
+                        localStorage.setItem('clickCounts', count);
+                        document.getElementById('click-count').innerHTML = count;
+                    } else{
+                        document.getElementById('click-count').innerHTML = 'Storage is not available';
+                    }
+                }
+
+                
+
+            </script>
+
+            <!-- Till HTML SVG --, 0h 45m -->
+        </div>
+    </section>
+</body>
+</html>

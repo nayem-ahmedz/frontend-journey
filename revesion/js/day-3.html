@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 | Practice (Revesion) | JavaScript</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date :  11 Jan 2025 -->
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">JavaScript :: 11 Jan 2025, from self exp</h1>
+    
+            <p id="demo"></p>
+        </div>
+    </section>
+    <script>
+        const fruits = ['Apple', 'Mango', 'Banana'];
+        fruits.push('Tomato');
+        fruits.pop();
+        fruits.pop();
+        console.log(fruits.length);
+        /*
+        class Fruit{
+            constructor(name){
+                this.name = name;
+            }
+            getName(){
+                return this.name;
+            }
+        }
+        const fruit1 = new Fruit('Mango');
+        console.log(fruit1.name);
+
+        class Bucket extends Fruit{
+            constructor(size, name){
+                super(name);
+                this.size = size;
+            }
+            getBucket(){
+                return `${this.size} sized bucket is filled with ${this.getName()}`;
+            }
+        }
+        const bucket1 = new Bucket('large', 'Mango');
+        console.log(bucket1.getBucket());
+        
+       function print(a){
+        console.log(a);
+       }
+
+       let p = 15, q = 6;
+       const sum = p + q;
+       print(sum);
+
+       const newPromise = new Promise((resolve, reject) => {
+        if(p>10){
+            resolve('P is greater than 10');
+        } else{
+            reject(new Error('P is smaller than 10'));
+        }
+       })
+
+       newPromise
+         .then((res)=>{
+            console.log(res);
+         })
+         .catch((err)=>{
+            console.log(err.message);
+         })
+        
+       const hasMeeting = false;
+       const meeting = new Promise((resolve, reject) => {
+        if(!hasMeeting){
+            const newMeeting = {
+                name: 'Teachers Meetup',
+                place: 'Sylhet',
+                time: '12:30 PM'
+            };
+            resolve(newMeeting);
+        } else reject(new Error('Meeting already exist'));
+       });
+
+       meeting
+       .then((res)=> {
+        console.log(res);
+       })
+       .catch((err)=>{
+        console.log(err.message);
+       })
+        */
+    </script>
+</body>
+</html>

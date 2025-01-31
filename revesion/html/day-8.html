@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 | Practice (Revesion) | HTML</title>
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date : 19 Jan 2025, HTML from w3school.com; at 2:25 PM, from HTML -- -->
+     <style>
+        .ul-1{
+            list-style-type: square;
+        }
+        .nav{
+            background-color: rgba(0,0,0,0.5); padding: 0; margin: 0; list-style-type: none; overflow: hidden;
+        }
+        .nav li{
+            float: left;
+        }
+        .nav li a{
+            display: block; padding: 15px; text-decoration: none; color: white;
+        }
+        .nav li a:hover{
+            background-color: rgba(0,0,0, 0.5);
+        }
+        .css-grid{
+            display: grid; grid-template-columns: 33% 33% 33%;
+        }
+        .css-grid > div:nth-child(odd){
+            background-color: gray;
+        }
+        .css-grid > div{
+            padding: 5px 10px; background-color: lightgray;
+        }
+     </style>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">HTML :: 19 Jan 2025, from w3school.com</h1>
+            
+            <h2> &gt;&gt; <u>HTML List</u> </h2>
+            <h3>Unorder List</h3>
+            <ul class="ul-1">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol type="1" start="50">
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Mango</li>
+            </ol>
+
+            <h3>Description List</h3>
+            <dl>
+                <dt>Coffe</dt>
+                <dd>- white coffe</dd>
+                <dd>- black coffe</dd>
+                <dt>Tea</dt>
+                <dd>- Milk and no-milk tea</dd>
+            </dl>
+
+            <h3>Nested List</h3>
+            <ul>
+                <li>Item one</li>
+                <li>Item two
+                    <ul>
+                        <li>Part 1</li>
+                        <li>Part 2</li>
+                    </ul>
+                </li>
+                <li>Item three</li>
+            </ul>
+            <h3>A sample Nav</h3>
+            <ul class="nav">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About</a> </li>
+                <li> <a href="#">Contact</a> </li>
+                <li> <a href="#">Projects</a> </li>
+            </ul>
+
+            <h2>Div centered aligned using Grid</h2>
+            <div class="css-grid">
+                <div>
+                    <h3>This is a heading</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, perspiciatis quo nam quaerat rem voluptatibus.</p>
+                </div>
+                <div>
+                    <h3>This is a heading</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, perspiciatis quo nam quaerat rem voluptatibus.</p>
+                </div>
+                <div>
+                    <h3>This is a heading</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, perspiciatis quo nam quaerat rem voluptatibus.</p>
+                </div>
+            </div>
+            
+            <!-- Till HTML div, 1H + 30 mins -->
+        </div>
+    </section>
+</body>
+</html>
