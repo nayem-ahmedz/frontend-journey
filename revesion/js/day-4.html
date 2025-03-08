@@ -12,11 +12,48 @@
         <div class="wrapper">
             <h1 class="text-center">JavaScript :: 15 Jan 2025, from w3school, at 9:45 PM</h1>
     
-            
+            <p id="demo">Demo</p>
+            <p id="demo2">Demo2</p>
         </div>
     </section>
     <script>
-        
+        const field = document.getElementById('demo');
+        // display(field);
+        // function display(a){
+        //     fetch('http://127.0.0.1:5500/revesion/js/text.txt')
+        //     .then((res) => res.text())
+        //     .then((res2) => a.innerText = res2);
+        // }
+
+        //another example
+        const file = 'http://127.0.0.1:5500/revesion/js/text.txt';
+        fetch(file)
+        .then((res) => res.text())
+        .then((res2) => field.innerText = res2);
+
+        const file2 = 'https://nayem-ahmedz.netlify.app/pages/about';
+        //using async function
+        const field2 = document.getElementById('demo2');
+        setTimeout(() => {
+            return getText(file); //using file2 produce a error
+        }, 2000);
+        async function getText(file){
+            const obj = await fetch(file);
+            const text = await obj.text();
+            field2.innerHTML = 'using async function : ' + text;
+        }
+
+        //with error handling
+        // async function getText(file){
+        //     try{
+        //         const obj = await fetch(file);
+        //         const text = await obj.text();
+        //         field2.innerHTML = 'using async function : ' + text;
+        //     }
+        //     catch{
+        //         console.log('error');
+        //     }
+        // }
     </script>
 </body>
 </html>

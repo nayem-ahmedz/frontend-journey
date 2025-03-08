@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 | Practice (Revesion) | JavaScript</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Date :  25 Feb 2025, from w3school, at 0:0 - -->
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <h1 class="text-center">JavaScript :: 25 Feb 2025, from w3school, at 0:0 --</h1>
+
+            <p id="demo"></p>
+            
+        </div>
+    </section>
+    <script>
+        let hasMeeting = false;
+        const promise = new Promise((resolve, reject) => {
+            if(!hasMeeting){
+                const meeting = {
+                    id: 1,
+                    name: 'Teachers Meetup',
+                    time: '2:00 PM'
+                }
+                resolve(meeting);
+            } else{
+                reject(new Error('Meeting is already scheduled'));
+            }
+        });
+        function addToCalender(meeting){
+            const calender = `Meeting is scheuled on ${meeting.time}, named ${meeting.name}`;
+            return Promise.resolve(calender);
+        }
+
+        promise
+          .then(addToCalender)
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err.message));
+
+        const student = {
+            name: 'Nayem Ahmed',
+            age: 24,
+            status: 'active'
+        };
+        for(i in student){
+            console.log(i + ' : ' + student[i]);
+        }
+
+        const field = document.getElementById('demo');
+        const file = 'http://127.0.0.1:5500/revesion/js/calcSum.js';
+
+        // fetch(file)
+        //   .then(res => res.text())
+        //   .then((res) => field.textContent = res)
+        //   .catch((err) => console.log(err));
+
+        //display(file);
+        async function display(file){
+            const obj = await fetch(file);
+            const data = await obj.text();
+            field.textContent = data;
+            console.log(data);
+        }
+    </script>
+</body>
+</html>
