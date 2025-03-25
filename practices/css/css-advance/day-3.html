@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Advance | Mar 8 2025</title>
+    <style>
+        div{
+            height: 200px; width: 300px; margin-bottom: 20px;
+        }
+        .grad{
+            background-image: linear-gradient(45deg, red, green);
+        }
+        .grad2{
+            background-image: linear-gradient(90deg, rgba(255,0,0,0), rgba(255,0,0,1.0));
+        }
+        .grad3{
+            background-image: linear-gradient(45deg, red 50px, green 20px);
+        }
+        .grad-conic{
+            background-image: conic-gradient(rgba(255,0,0,0.1) 360deg, white 0deg); transition: all 1s;
+        }
+        .full-conic{
+            background-image: conic-gradient(red 360deg, white 0deg);
+        }
+        .shadow{
+            text-shadow: 2px 2px 5px red;
+        }
+        .box-shadow{
+            box-shadow: 10px 10px 5px 10px lightblue; border: 1px solid gray;
+        }
+        .texts-dot{
+            width: 250px; border: 1px solid gray; text-wrap: nowrap; text-overflow: ellipsis; overflow: hidden;
+        }
+        .texts-dot:hover{ overflow: visible; }
+        .writing-mode{
+            writing-mode: vertical-lr;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- <h1>CSS Advance From w3school.com</h1>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad-conic"></div> -->
+
+
+    <h1 class="shadow">This text has shadow effects</h1>
+    <div class="box-shadow"></div>
+    <p class="texts-dot">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, maiores.</p>
+    <p class="writing-mode">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, aut.</p>
+
+    <script>
+        // setTimeout(() =>{
+        //     document.querySelector('.grad-conic').classList.add('full-conic');
+        // }, 2000)
+    </script>
 </body>
 </html>
