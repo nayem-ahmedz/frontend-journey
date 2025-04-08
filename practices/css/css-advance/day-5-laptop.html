@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advance | 2 April 2025</title>
+    <style>
+        :root{
+            --blue: blue;
+        }
+        .myDiv{
+            background-color: var(--blue); color: white; padding: 5px;
+        }
+        .btn1{
+            --blue: skyblue; background-color: var(--blue); margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="myDiv">
+        Hi My Div
+    </div>
+    <button class="btn1">Hey</button>
+    <div>
+        <p>Display : <span id="display"></span></p>
+        <button onclick="showVarValue()">Show Var Value</button>
+        <button onclick="changeVarValue()">Change Var Value</button>
+    </div>
+    <p>
+        <input type="text" id="cName" />
+        <input type="button" onclick="changeVarValue()" value="change var" />
+    </p>
+    <script>
+        let r = document.querySelector(':root');
+        //console.log(r); //root element, full html
+        let rs = getComputedStyle(r);
+        //console.log(rs); //entire styles, a object file
+        console.log(rs.getPropertyValue('--blue'));
+        r.style.setProperty('--blue', 'red');
+        console.log(rs.getPropertyValue('--blue'));
+        console.log('Printed : ' + r.style.getPropertyValue('--blue'));
+
+        const display = document.getElementById('display');
+        function showVarValue(){
+            display.textContent = r.style.getPropertyValue('--blue');
+        }
+        const changeVarValue = function(){
+            r.style.setProperty('--blue', 'green');
+            let cName = document.getElementById('cName').value.trim();
+            if(cName){
+                r.style.setProperty('--blue', cName);
+            }
+            display.textContent = r.style.getPropertyValue('--blue');
+        }
+    </script>
+</body>
+</html>
