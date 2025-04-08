@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advance | 28 March 2025</title>
+    <style>
+        .wrapper{
+            margin: 50px 100px;
+        }
+        .button{
+            padding: 10px 20px; font-size: 1rem; background-color: blue; color: white; border: none; box-shadow: 0 10px gray;
+            border-radius: 5px 5px 0 0; transition: 0.2s;
+        }
+        .button:active{
+            transform: translateY(10px); box-shadow: 0 1px gray;
+        }
+        .resizable{
+            height: 100px; width: 50%; border: 1px solid blue; margin-top: 30px; resize: both; padding: 20px; overflow: auto;
+        }
+        :root{
+            --c1: #eee;
+            --c2: #abc;
+        }
+        .resizable{
+            background-color: var(--c1);
+        }
+        .resizable > P{
+            background-color: var(--c2);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button class="button">Hold Tight</button>
+        <div class="resizable">
+            <p>resizable</p>
+        </div>
+
+        <script>
+            
+        </script>
+    </div>
+</body>
+</html>
