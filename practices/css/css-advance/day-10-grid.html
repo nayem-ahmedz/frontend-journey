@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 | Advance CSS</title>
+    <style>
+        .grid-container{
+            border: 1px solid red; height: 700px;
+            display: grid;
+            grid-template-columns: 100px 300px 50px;
+            gap: 10px 20px;
+            grid-template-rows: 50px 200px 100px;
+            /* justify-content: center;
+            align-content: center; */
+            place-content: center;
+        }
+        .grid-item{
+            background-color: gray; padding: 10px;
+        }
+        .c1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .c7{
+            grid-column: 2 / span 2;
+        }
+    </style>
+    <!-- <style>
+        .grid-container{
+            border: 1px solid black; width: 100%; height: 700px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px; /* 1fr 1fr 2fr */
+            grid-template-rows: 100px 100px 100px;
+            gap: 20px 10px;
+            /* justify-content: center;
+            align-content: center; */
+            place-content: end center; /* y-axis x-axix */
+        }
+        .grid-item{
+            background-color: gray; padding: 30px;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item c1"> 1 </div>
+        <div class="grid-item c2"> 2 </div>
+        <div class="grid-item c3"> 3 </div>
+        <div class="grid-item"> 4 </div>
+        <div class="grid-item"> 5 </div>
+        <div class="grid-item"> 6 </div>
+        <div class="grid-item c7"> 7 </div>
+        <!-- <div class="grid-item"> 8 </div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 | Advance CSS</title>
+    <style>
+        .grid-container{
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 10px;
+            row-gap: 20px;
+            gap: 20px 10px; /* Shorthand row and col gap */
+
+        }
+        .grid-item{
+            background-color: gray; padding: 30px;
+        }
+        .c1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-column: 1 / span 2; /* Shorthand grid-column-start and grid-column-end, start from 1 and span 2 col */
+
+        }
+        .c3{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-row: 2 / span 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item c1"> 1 </div>
+        <div class="grid-item c2"> 2 </div>
+        <div class="grid-item c3"> 3 </div>
+        <div class="grid-item"> 4 </div>
+        <div class="grid-item"> 5 </div>
+        <div class="grid-item"> 6 </div>
+        <div class="grid-item"> 7 </div>
+        <div class="grid-item"> 8 </div>
+    </div>
+</body>
+</html>

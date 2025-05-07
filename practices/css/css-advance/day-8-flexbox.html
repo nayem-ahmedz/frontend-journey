@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 | Advance CSS</title>
+    <style>
+        .flex-container{
+            border: 1px solid red; height: 800px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .flex-child{
+            height: 150px; border: 1px solid blue; font-size: 3rem; flex-grow: 1;
+        }
+        .flex-child:nth-child(3){
+            flex-grow: 3;
+        }
+        .c2{
+            width: 150px; flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-child"> 1 </div>
+        <div class="flex-child c2"> 2 </div>
+        <div class="flex-child"> 3 </div>
+        <div class="flex-child"> 4 </div>
+    </div>
+</body>
+</html>
